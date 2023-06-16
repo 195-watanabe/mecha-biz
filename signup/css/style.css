@@ -1,0 +1,22 @@
+.signup {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+.signup-inner {
+  width: 480px;
+  margin: 0 auto;
+}
+.signup-headding {
+  font-size: 22px;
+  font-weight: 500;
+}
+.signup-txt {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6em;
+  margin-top: 24px;
+}
+.signup-txt span {
+  color: red;
+}
