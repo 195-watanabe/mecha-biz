@@ -1,3 +1,5 @@
+@use "../../common/scss/mixin" as *;
+
 .signup {
   width: 100%;
   padding-top: 80px;
@@ -21,6 +23,37 @@
 
     span {
       color: red;
+    }
+  }
+}
+
+// レスポンシブ
+// スマホサイズ
+@include mq(sm) {
+  .signup {
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 32px;
+
+    &-inner {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    &-headding {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    &-txt {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.6em;
+      margin-top: 12px;
+
+      span {
+        color: red;
+      }
     }
   }
 }

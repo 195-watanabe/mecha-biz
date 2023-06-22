@@ -20,3 +20,28 @@
 .signup-txt span {
   color: red;
 }
+
+@media screen and (max-width: 767px) {
+  .signup {
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+  .signup-inner {
+    width: 300;
+    margin: 0 auto;
+  }
+  .signup-headding {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .signup-txt {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin-top: 12px;
+  }
+  .signup-txt span {
+    color: red;
+  }
+}

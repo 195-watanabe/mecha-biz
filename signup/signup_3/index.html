@@ -27,9 +27,7 @@
   <header>
     <div class="header-inner">
       <a href="" class="header-logo-link">
-        <p class="header-logo-txt">
-          めちゃビズ<span>MECHA-BIZ</span>
-        </p>
+        <div class="header-logo-img"></div>
       </a>
       <nav class="header-gnav">
         <ul class="c-gnav">
@@ -62,10 +60,28 @@
         <a href="" class="header-login">
           <span>ログイン</span>
         </a>
-        <a href="" class="header-signup">
+        <a href="../../signup/signup_1/index.html" class="header-signup">
           <img src="../../common/images/icn_signup.png" alt="">
           <span>会員登録</span>
         </a>
+        <!-- ハンバーガー -->
+        <div class="hamburger">
+          <button class="hamburger-btn" type="button">
+            <span class="hamburger-btn-center"></span>
+          </button>
+          <div class="hamburger-drawer">
+            <div class="hamburger-inner">
+              <ul class="hamburger-menu">
+                <li><a href="../../top/index.html">TOP</a></li>
+                <li><a href="../../top/index.html">パートナーを探す</a></li>
+                <li><a href="../../top/index.html">ニュースレター</a></li>
+                <li><a href="../../top/index.html">このサイトについて</a></li>
+                <li><a href="../../top/index.html">お知らせ</a></li>
+                <li><a href="../../contact/contact_1/index.html">お問い合わせ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -92,10 +108,10 @@
         <p class="thanks-txt">
           このたびは、会員登録をして頂き誠にありがとうございます。<br>
           ご記入頂いたメールアドレスへ、自動返信の確認メールをお送りしております。<br>
-          <br>
-          しばらく経ってもメールが届かない場合は、入力頂いたメールアドレスが間違っているか、<br>
+          <span><br></span>
+          しばらく経ってもメールが届かない場合は、入力頂いたメールアドレスが間違っているか、<span><br></span>
           迷惑メールフォルダに振り分けられている可能性がございます。<br>
-          また、ドメイン指定をされている場合は、「@XXXX.com」からの<br>
+          また、ドメイン指定をされている場合は、「@XXXX.com」からの<span><br></span>
           メールが受信できるようあらかじめ設定をお願いいたします。<br>
         </p>
       </div>
@@ -152,6 +168,8 @@
       <p class="copyright">© めちゃビズ All Rights Reserved</p>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="../../common/js/common.js"></script>
 </body>
 
 </html>
