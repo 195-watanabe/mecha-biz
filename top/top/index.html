@@ -86,73 +86,38 @@
     </div>
   </header>
   <main>
-    <!-- ページタイトル -->
-    <div class="page-title">
-      <div class="page-title-txt">
-        <h1>会員登録</h1>
-        <p>SIGN UP</p>
-      </div>
-      <div class="page-title-bg"></div>
-    </div>
-    <!-- メインコンテンツ -->
-    <div class="signup">
-      <div class="signup-inner">
-        <h2 class="signup-heading">登録内容の確認</h2>
-        <p class="signup-txt">
-          登録内容を確認の上、下部のボタンよりご登録ください。<br>
-          <span>*は必須項目</span>
-        </p>
-        <!-- ステップ表示 -->
-        <ol class="formstep">
-          <li><span>1</span><br>入力</li>
-          <li class="current"><span>2</span><br>確認</li>
-          <li><span>3</span><br>完了</li>
-        </ol>
-        <!-- 入力フォーム -->
-        <form class="signup-form">
-          <dl class="formset">
-            <dt class="formset-title">会社名<span>*</span></dt>
-            <dd class="formset-contents">
-              ◯◯◯◯株式会社...など入力した内容が表示されます。◯◯◯◯株式会社...など入力した内容が表示されます。
-            </dd>
-          </dl>
-          <dl class="formset">
-            <dt class="formset-title">担当者<span>*</span></dt>
-            <dd class="formset-contents">
-              めちゃビズ 太郎
-            </dd>
-          </dl>
-          <dl class="formset">
-            <dt class="formset-title">電話番号<span>*</span></dt>
-            <dd class="formset-contents">
-              0001234567
-            </dd>
-          </dl>
-          <dl class="formset">
-            <dt class="formset-title">メールアドレス<span>*</span></dt>
-            <dd class="formset-contents">
-              mecha-biz@aaa.com
-            </dd>
-          </dl>
-          <dl class="formset">
-            <dt class="formset-title">ログインパスワード<span>*</span></dt>
-            <dd class="formset-contents">
-              <!-- phpなら、パスワードの文字数をstrlen()で調べて*で出力？ -->
-              ********
-            </dd>
-          </dl>
-          <div class="formset-buttons">
-            <button class="formset-fix-btn" type="button" onclick="location.href='../signup_1/index.html'">
-              登録内容を修正する
-            </button>
-            <button class="formset-register-btn" type="button" onclick="location.href='../signup_3/index.html'">
-              上記の内容で登録
-            </button>
+    <div class="top">
+      <div class="mv">
+        <div class="mv-inner">
+          <!-- MVキャッチコピー -->
+          <div class="mv-heading">
+            <p>BtoC課題解決型マッチングサービス</p>
+            <h2>
+              企業と企業のマッチングを<br>
+              <span>最短で実現します</span>
+            </h2>
           </div>
-        </form>
+          <div class="mv-object">
+            <div class="mv-btn">
+              <p>\ ビジネスを始める・パートナーを探す /</p>
+              <a href="../../signup/signup_1/index.html">最短1分で簡単登録</a>
+            </div>
+            <img src="../../common/images/icn_free.png" alt="2024年3月31迄ご利用は無料" class="mv-free">
+          </div>
+        </div>
+        <div class="mv-bg">
+          <img src="../../common/images/bg_top_mv_left.jpg" alt="背景画像" class="mv-bg-l">
+          <img src="../../common/images/bg_top_mv.jpg" alt="背景画像" class="mv-bg-r">
+        </div>
+      </div>
+      <!-- 背景 -->
+      <div class="top-bg">
+        <img src="" alt="背景画像" class="top-bg-l">
+        <img src="" alt="背景画像" class="top-bg-r">
       </div>
     </div>
   </main>
+  <!-- フッター -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-contents">
@@ -207,5 +172,4 @@
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script src="../../common/js/common.js"></script>
 </body>
-
 </html>

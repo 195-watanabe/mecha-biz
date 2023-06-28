@@ -1,0 +1,128 @@
+@use "../../common/scss/mixin" as *;
+
+.top {
+  overflow: hidden;
+}
+
+// MV
+.mv {
+  width: 100%;
+  // height: 1200px;
+  position: relative;
+  padding-top: 90px;
+
+  &-inner {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    left: 10vw;
+    // display: flex;
+    z-index: 10;
+  }
+
+  &-heading {
+    display: inline-block;
+    letter-spacing: .1em;
+
+    p {
+      font-weight: 500;
+      font-size: 1.3vw;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 3.125vw;
+      line-height: 1.4em;
+      margin-top: 1.8vw;
+
+      span {
+        position: relative;
+        
+        &:after {
+          @include under-l;
+        }
+      }
+    }
+  }
+
+  &-object {
+    display: flex;
+    margin-top: 3.33vw;
+
+    img {
+      margin-left: 2.08vw;
+      display: block;
+      width: 14vw;
+      height: 13.8vw;
+    }
+  }
+
+  &-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 0.93vw;
+      font-weight: 500;
+    }
+
+    a {
+      margin-top: 0.833vw;
+      width: 18.125vw;
+      height: 4.0625vw;
+      border-radius: 2.03vw;
+      font-size: 1.145vw;
+      line-height: 4.0625vw;
+      display: block;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-align: center;
+      color: #fff;
+      background-color: #22b5be;
+    }
+  }
+
+  &-bg {
+    width: 100%;
+    // position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+  }
+
+  &-bg-r,
+  .mv-bg-l {
+    display: inline-block;
+  }
+
+  &-bg-r {
+    width: 60vw;
+    height: 31.9vw;
+  }
+
+  &-bg-l {
+    width: 15vw;
+    height: 51.9vw;
+  }
+
+}
+
+// 背景
+.top-bg {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+// レスポンシブ
+// スマホサイズ
+@include mq(sm) {
+  
+}
