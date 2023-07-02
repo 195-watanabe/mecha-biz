@@ -1,3 +1,19 @@
+.top-morebtn {
+  display: block;
+  width: 348px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  color: #fff;
+  background-color: #22b5be;
+  box-shadow: 2px 2px 8px 2px rgba(102, 197, 165, 0.6);
+  border-radius: 35px;
+  margin: 100px auto 0;
+}
+
 .formstep {
   display: flex;
   width: 400px;
