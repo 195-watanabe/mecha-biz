@@ -17,9 +17,9 @@ $('.pickup-slide').slick({
   nextArrow: '<img src="../../common/images/btn_pickup_next.png" class="slide-arrow next-arrow">',
 
   responsive: [{
-   breakpoint: 767, // ブレイクポイントを指定
+   breakpoint: 1000, // ブレイクポイントを指定
     settings: {
-     slidesToShow: 1,
+     slidesToShow: 2,
     },
    }
  ]
