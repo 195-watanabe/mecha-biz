@@ -238,6 +238,9 @@
       object-fit: cover;
     }
 
+    img:nth-child(2) {
+      display: none;
+    }
   }
 
   &-img {
@@ -833,11 +836,11 @@
     width: 540px;
   }
   
-    &-date {
-      display: inline-block;
-      font-size: 15px;
-      font-weight: 400;
-    }
+  &-date {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+  }
 
   &-cat {
     display: inline-block;
@@ -1206,9 +1209,10 @@
       width: 320px;
       height: 200px;
       margin: 0;
+      border-radius: 10px;
 
       img {
-        border-radius: 8px;
+        border-radius: 10px;
       }
     }
 
@@ -1754,5 +1758,649 @@
 
   .top-bg {
     display: none;
+  }
+}
+
+// レスポンシブ
+// スマホサイズ
+@include mq(sm) {
+  // MV
+  .mv {
+    &-inner {
+      padding: 0 2.778vw;
+      overflow: hidden;
+      margin-top: 6.667vw;
+    }
+
+    &-heading.sp {
+      margin-left: 0px;
+  
+      p {
+        font-size: 3.333vw;
+      }
+  
+      h1 {
+        font-size: 7.222vw;
+        font-size: 7.6vw;
+        margin-top: 16px;
+      }
+    }
+
+    &-object {
+      margin-top: 0;
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-top: 4px;
+        margin-left: -1.667vw;
+      }
+    }
+
+    &-bg.sp {
+      width: 100vw;
+      height: 70vw;
+      margin: -8.333vw auto 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-btn.sp {
+      width: 100%;
+      margin-top: 10vw;
+
+      p {
+        font-size: 3.611vw;
+      }
+
+      a {
+        margin: 4.444vw 0 13.333vw;
+        width: 83.333vw;
+        height: 15.556vw;
+        border-radius: 7.778vw;
+        font-size: 5vw;
+        line-height: 15.556vw;
+      }
+    }
+  }
+
+  // ピックアップ
+  .pickup {
+    height: 218.75vw;
+
+    &-inner {
+      padding: 5vw;
+    }
+
+    &-txt {
+      margin-left: 0px;
+
+      p {
+        font-size: 14px;
+      }
+
+      h2 {
+        display: block;
+        text-align: start;
+        font-size: 20px;
+        margin-top: 8px;
+      }
+    }
+
+    &-slide {
+      margin-left: 0px;
+      margin-top: 7.5vw;
+    }
+
+    .slide-arrow {
+      top: -68px;
+      z-index: 10;
+      left: auto;
+      right: 40px;
+      width: 48px;
+      height: 48px;
+    }
+
+    .prev-arrow {
+      transform: translateX(-30px);
+    }
+
+    .next-arrow {
+      transform: translateX(30px);
+    }
+
+    &-img {
+      width: 90vw;
+      height: 56.25vw;
+    }
+
+    &-ttl {
+      width: 90vw;
+      font-size: 16px;
+      margin-top: 5vw;
+    }
+
+    &-bg {
+      top: 3.125vw;
+      clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    }
+  }
+
+  // BtoC市場に関わる企業・法人・個人事業主のみなさんが〜
+  .service {
+    position: relative;
+
+    &-inner {
+      width: 93.75vw;
+      margin: -93.75vw auto 48px;
+    }
+
+    &-txt {
+      width: 100%;
+
+      img {
+        display: none;
+      }
+
+      img:nth-child(2) {
+        display: block;
+      }
+    }
+
+    &-img {
+      margin-top: 32px;
+
+      img:nth-child(2) {
+        display: block;
+      }
+    }
+
+    &-bg-sp {
+      display: none;
+    }
+  }
+
+  // メリット
+  .merit {
+    position: relative;
+    padding-top: 15vw;
+
+    &-inner {
+      width: 93.75vw;
+    }
+
+    &-ttl {
+      font-size: 7.5vw;
+
+      span {
+        font-size: 4.375vw;
+        margin-bottom: 3.125vw;
+      }
+    }
+
+    &-wrapper {
+      margin-top: 10vw;
+
+      li {
+        margin-top: 7.5vw;
+
+        &::after {
+          width: 93.75vw;
+          height: 80%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+        }
+      }
+    }
+    
+    &-img {
+      width: 93.75vw;
+      height: 60vw;
+      padding-bottom: 0;
+      margin-bottom: 2.5vw;
+
+      img {
+        width: 88vw;
+        height: 100%;
+        margin-right: 5.75vw;
+      }
+
+      ._02 {
+        width: 80.75vw;
+        height: 64vw;
+        margin-right: 0;
+        margin-left: 12vw;
+      }
+
+      ._03 {
+        width: 91.75vw;
+        margin-right: 2vw;
+      }
+
+      ._04 {
+        width: 82.75vw;
+        margin-right: 0;
+        margin-left: 10vw;
+      }
+    }
+    
+    &-img.sp {
+      width: 93.75vw;
+      height: 100%;
+    }
+    
+    &-img.even {
+      height: 64vw;
+      margin-bottom: 4vw;
+    }
+
+    &-txt {
+      width: 86vw;
+      height: 52vw;
+      padding: 7.5vw 5vw;
+
+      h3 {
+        font-size: 6.875vw;
+      }
+
+      p {
+        font-size: 3.4375vw;
+        margin-top: 5vw;
+      }
+    }
+
+    &-bg-sp {
+      top: -10vw;
+
+      img {
+        width: 40.625vw;
+        height: auto;
+      }
+    }
+  }
+
+  // 活用事例
+  .case {
+    padding-top: 0vw;
+    margin-top: 15vw;
+  
+    &-inner {
+      position: relative;
+      width: 93.75vw;
+    }
+  
+    &-ttl {
+      font-size: 4.375vw;
+      
+      span {
+        font-size: 12vw;
+        margin-bottom: 3.125vw;
+      }
+    }
+
+    &-list {
+      margin-top: 10vw;
+
+      li {
+        width: 100%;
+        padding-bottom: 32px;
+        margin-bottom: 64px;
+      }
+      
+      li:last-child {
+        margin-bottom: 24px;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      height: 56.25vw;
+    }
+
+    &-txt {
+      font-size: 4.375vw;
+    }
+
+    &-company {
+      font-size: 4.375vw;
+    }
+
+    &-bg-sp {
+      top: 0vw;
+
+      img {
+        width: 40vw;
+        height: auto;
+        margin-top: 10vw;
+      }
+
+      img:first-child {
+        width: 42vw;
+        margin-top: 0;
+      }
+    }
+  }
+
+  // 料金
+  .price {
+    padding-top: 15vw;
+    margin-bottom: 36vw;
+  
+    &-inner {
+      width: 93.75vw;
+    }
+  
+    &-ttl {
+      font-size: 4.375vw;
+      
+      span {
+        font-size: 12vw;
+        margin-bottom: 3.125vw;
+      }
+    }
+
+    &-container {
+      margin-top: 5vw;
+    }
+
+    &-img {
+      width: 87.5vw;
+      height: 87.5vw;
+      margin-bottom: 2.5vw;
+    }
+
+    &-sub-heading {
+      font-size: 6.25vw;
+    }
+
+    &-heading {
+      font-size: 5.625vw;
+      margin-top: 10vw;
+
+      span {
+        font-size: 54px;
+      }
+    }
+
+    &-msg {
+      margin-top: 10vw;
+      font-size: 4.375vw;
+    }
+
+    &-bg-sp {
+      top: 0vw;
+
+      img {
+        width: 36vw;
+        height: auto;
+        margin-top: 7vw;
+      }
+
+      img:first-child {
+        width: 38vw;
+        margin-top: 0;
+      }
+    }
+  }
+
+  // 会員登録セクション
+  .registration {
+    height: 100vw;
+
+    &-inner {
+      width: 93.75vw;
+      padding-top: 25vw;
+    }
+
+    &-img {
+      width: 50vw;
+      height: 50vw;
+      top: -30vw;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    &-btn-txt {
+      width: 100%;
+    }
+
+    &-btn1 {
+      width: 100%;
+      height: 15vw;
+      line-height: 12.5vw;
+      font-size: 5vw;
+      margin: 5vw auto 7.5vw;
+
+      span {
+        font-size: 28px;
+      }
+    }
+
+    &-txt {
+      font-size: 3.75vw;
+    }
+
+    &-btn2 {
+      width: 80%;
+      height: 15vw;
+      line-height: 15vw;
+      font-size: 5vw;
+      margin: 5vw auto 7.5vw;
+
+      span {
+        font-size: 28px;
+      }
+    }
+
+    &-bg {
+      height: 100%;
+
+      img {
+        width: 68.75vw;
+        transform: translateX(-5vw) translateY(15vw);
+      }
+
+      img:first-child {
+        transform: translateX(-12.5vw) translateY(-5vw);
+      }
+    }
+  }
+
+  // ユーザーの声
+  .voice {
+    margin-top: 5vw;
+    padding-top: 10vw;
+
+    &-inner {
+      width: 93.75vw;
+      max-width: 360px;
+    }
+  
+    &-ttl {
+      font-size: 4.375vw;
+  
+      span {
+        font-size: 12vw;
+        margin-bottom: 3.125vw;
+      }
+    }
+
+    &-list {
+      margin-top: 10vw;
+
+      li {
+        width: 100%;
+        padding-bottom: 5vw;
+        margin-bottom: 10vw;
+
+        img {
+          height: 62.5vw;
+        }
+      }
+    }
+
+    &-company {
+      font-size: 13px;
+      margin: 16px 10px 0;
+    }
+
+    &-txt {
+      font-size: 13px;
+      padding: 10px;
+      margin: 16px 10px 0;
+    }
+
+
+    &-bg-sp {
+      top: 0vw;
+  
+      img {
+        width: 48vw;
+        height: auto;
+        margin-top: 0vw;
+        transform: translateX(5vw) translateY(-15vw);
+      }
+  
+      img:first-child {
+        width: 50vw;
+        margin-top: 15vw;
+        transform: translateX(-10vw);
+      }
+    }
+  }
+
+  // トピックス
+  .topics {
+    margin-top: 5vw;
+    padding-top: 10vw;
+  
+    &-inner {
+      width: 93.75vw;
+    }
+  
+    &-ttl {
+      font-size: 4.375vw;
+  
+      span {
+        font-size: 12vw;
+        margin-bottom: 3.125vw;
+      }
+    }
+
+    &-msg {
+      font-size: 16px;
+      margin-top: 10vw;
+    }
+
+    &-list {
+      width: 100%;
+      margin-top: 10vw;
+
+      li {
+        margin-bottom: 5vw;
+        padding: 3.125vw;
+        border-radius: 2.5vw;
+        
+        img {
+          width: 28.125vw;
+          height: 22.5vw;
+          border-radius: 2.5vw;
+        }
+      }
+    }
+
+    &-right {
+      width: 56.25vw;
+    }
+
+    &-date {
+      font-size: 3.75vw;
+      margin-bottom: 2.5vw;
+      margin-right: 2.5vw;
+    }
+    
+    &-cat {
+      height: 6.25vw;
+      line-height: 6.25vw;
+      border-radius: 3.125vw;
+      font-size: 3.125vw;
+      padding: 0 16px;
+      margin-left: 0;
+      margin-bottom: 2.5vw;
+    }
+
+    &-heading {
+      font-size: 3.75vw;
+      margin-top: 0vw;
+    }
+    
+    &-company {
+      font-size: 3.125vw;
+      margin-top: 2.5vw;
+      margin-bottom: 2.5vw;
+    }
+
+    &-tag {
+      width: 87.5vw;
+      padding: 3.125vw;
+      border-radius: 2.5vw;
+      transform: translateX(-31.25vw);
+    }
+
+    &-tag-item {
+      font-size: 3.125vw;
+      margin-right: 2.5vw;
+    }
+  }
+
+  // NEWS
+  .news {
+    margin-bottom: 56.25vw;
+
+    &-inner {
+      width: 93.75vw;
+      justify-content: center;
+      align-items: start;
+    }
+  
+    &-ttl {
+      font-size: 4.375vw;
+      margin-bottom: 10vw;
+  
+      span {
+        font-size: 12vw;
+        margin-bottom: 3.125vw;
+      }
+    }
+
+    &-r {
+      width: 100%;
+
+      li {
+        margin: 2.5vw 0;
+        padding: 5vw;
+      }
+    }
+
+    &-date {
+      font-size: 3.75vw;
+      margin-right: 3.75vw;
+    }
+
+    &-tag {
+      font-size: 3.125vw;
+      padding: 2.5vw 7.5vw;
+    }
+
+    &-heading {
+      font-size: 4.0625vw;
+      margin: 3.75vw 0 0;
+
+    }
   }
 }

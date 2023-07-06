@@ -21,6 +21,10 @@ $('.pickup-slide').slick({
     settings: {
      slidesToShow: 2,
     },
+   breakpoint: 767, // ブレイクポイントを指定
+    settings: {
+     slidesToShow: 1,
+    },
    }
  ]
 });

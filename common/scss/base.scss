@@ -51,6 +51,7 @@ header {
   }
 
   &-logo-link {
+    margin-right: 32px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -58,10 +59,10 @@ header {
   }
 
   &-logo-img {
-    width: 180px;
-    height: 100%;
-    background-color: #22B5BE;
-    margin-right: 32px;
+    display: block;
+    object-fit: contain;
+    height: 66px;
+    margin: 12px 0;
   }
 
   &-gnav {
@@ -213,7 +214,7 @@ header {
 
   &-logo {
     height: 60px;
-    background-color: #20b6bf;
+  
   }
 
   // フッターナビ
@@ -231,7 +232,7 @@ header {
     align-items: center;
 
     li {
-      color: #cccccc;
+      color: #fff;
       height: 60px;
       font-size: 14px;
       font-weight: 500;
@@ -239,7 +240,7 @@ header {
       letter-spacing: .1em;
 
       a {
-        color: #cccccc;
+        color: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -258,13 +259,13 @@ header {
   }
 
   &-adress {
-    color: #cccccc;
+    color: #fff;
     font-size: 12px;
     font-weight: 500;
   }
 
   &-policy {
-    color: #cccccc;
+    color: #fff;
     font-size: 12px;
     font-weight: 500;
     text-decoration: underline;
@@ -273,7 +274,7 @@ header {
   .copyright {
     width: 100%;
     text-align: center;
-    color: #cccccc;
+    color: #fff;
     font-size: 12px;
     font-weight: 500;
     margin-top: 32px;
@@ -295,9 +296,7 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-inline: 4px;
-      // padding: 0;
-      // padding-left: 8px;
+      padding: 0 0 0 8px;
     }
 
     &-logo-img {
@@ -476,20 +475,23 @@ header {
   }
 
   .header {
-    &-inner {
-      padding-inline: 8px;
-    }
 
     &-logo-img {
-      width: 76px;
+      width: 100px;
       height: 100%;
+      margin: 0;
+    }
+
+    &-logo-link {
+      margin-right: 32px;
     }
 
     &-login {
       min-width: 0px;
       height: 48px;
-      font-size: 11px;
-      padding: 10px;
+      font-size: 12px;
+      word-wrap: break-word;
+      padding: 10px 10px;
       padding-top: calc(10px + 4px);
       padding-bottom: calc(10px - 4px);
       margin-right: 10px;
@@ -622,7 +624,7 @@ header {
       width: 120px;
       height: 56px;
       // height: auto;
-      background-color: #20b6bf;
+      
     }
 
     // フッターナビ
@@ -640,7 +642,7 @@ header {
 
       li {
         height: 20px;
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 500;
         padding-left: 0px;
         letter-spacing: .1em;
@@ -648,7 +650,7 @@ header {
         margin-right: 24px;
 
         a {
-          color: #cccccc;
+          color: #fff;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -667,14 +669,14 @@ header {
     }
 
     &-adress {
-      color: #cccccc;
-      font-size: 12px;
+      color: #fff;
+      font-size: 10px;
       font-weight: 500;
     }
 
     &-policy {
-      color: #cccccc;
-      font-size: 12px;
+      color: #fff;
+      font-size: 10px;
       font-weight: 500;
       text-decoration: underline;
     }
