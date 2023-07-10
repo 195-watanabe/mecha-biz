@@ -5,6 +5,192 @@ $(".hamburger-btn").click(function () {//ボタンがクリックされたら
   $(".hamburger-drawer").fadeToggle(200);//ボタン自身に activeクラスを付与し
 });
 
+// プロジェクト検索のモーダル
+$(".searchbtn").click(function () {//ボタンがクリックされたら
+  $('.modal-bg').addClass('modal-open');//modal-openクラスを付与
+});
+
+$(".searchbtn-area").click(function () {//地域検索ボタンがクリックされたら
+  $('.modal-area').addClass('modal-open');//modal-openクラスを付与
+});
+
+$(".searchbtn-industry").click(function () {//業種検索ボタンがクリックされたら
+  $('.modal-industry').addClass('modal-open');//modal-openクラスを付与
+});
+
+$(".searchbtn-tag").click(function () {//業種検索ボタンがクリックされたら
+  $('.modal-tag').addClass('modal-open');//modal-openクラスを付与
+});
+
+$(".modal-bg").click(function () {//背景がクリックされたら
+  $('.modal-bg').removeClass('modal-open');//クラス削除
+  $('.modal').removeClass('modal-open');//クラス削除
+});
+
+$(".modal-close").click(function () {//closeボタンがクリックされたら
+  $('.modal-bg').removeClass('modal-open');//クラス削除
+  $('.modal').removeClass('modal-open');//クラス削除
+});
+
+$(".btn-submit").click(function () {//closeボタンがクリックされたら
+  $('.modal-bg').removeClass('modal-open');//クラス削除
+  $('.modal').removeClass('modal-open');//クラス削除
+});
+
+// アコーディオン
+$(function () {
+  $(".accordion-ttl").on("click", function () {
+    $(this).next().slideToggle(300);
+    $(this).toggleClass("open", 300);
+  });
+});
+
+// 検索タグのチェックとクリア
+// 地域
+$(function() {
+  $('input[name="area"]').on('change', function() {   
+    var tagItem = [];
+    var searchItem = [];
+    $('input[name="area"]:checked').each(function() {
+      tagItem.push('<li class="tag-item">' + $(this).val() + '<span class="close"></span></li>');            
+      searchItem.push($(this).val() + '<span class="dot">, </span>');            
+    });
+    
+    $('ul.tag-list').html(tagItem);
+    $('button.searchbtn-area').html(searchItem);
+  });
+  
+  $('.btn-clear').on('click', function() {
+    if($("input:checkbox[name='area']").prop( 'checked', false )){
+      
+      $("input:checkbox[name='area']").prop( 'checked', false );
+      $('ul.tag-list').html('');
+      $('button.searchbtn-area').html('地域を選ぶ');
+      
+    }
+    return false;
+  });
+
+  $('.modal-close').on('click', function() {
+    if($("input:checkbox[name='area']").prop( 'checked', false )){
+      
+      $("input:checkbox[name='area']").prop( 'checked', false );
+      $('ul.tag-list').html('');
+      $('button.searchbtn-area').html('地域を選ぶ');
+      
+    }
+    return false;
+  });
+
+  $('.modal-bg').on('click', function() {
+    if($("input:checkbox[name='area']").prop( 'checked', false )){
+      
+      $("input:checkbox[name='area']").prop( 'checked', false );
+      $('ul.tag-list').html('');
+      $('button.searchbtn-area').html('地域を選ぶ');
+      
+    }
+    return false;
+  });
+});
+
+// 業種
+$(function() {
+  $('input[name="industry"]').on('change', function() {   
+    var tagItem = [];
+    var searchItem = [];
+    $('input[name="industry"]:checked').each(function() {
+      tagItem.push('<li class="tag-item">' + $(this).val() + '<span class="close"></span></li>');            
+      searchItem.push($(this).val() + '<span class="dot">, </span>');            
+    });
+    
+    $('ul.tag-list').html(tagItem);
+    $('button.searchbtn-industry').html(searchItem);
+  });
+  
+  $('.btn-clear').on('click', function() {
+    if($("input:checkbox[name='industry']").prop( 'checked', false )){
+      
+      $("input:checkbox[name='industry']").prop( 'checked', false );
+      $('ul.tag-list').html('');
+      $('button.searchbtn-industry').html('業種を選ぶ');
+      
+    }
+    return false;
+  });
+
+  $('.modal-close').on('click', function() {
+    if($("input:checkbox[name='industry']").prop( 'checked', false )){
+      
+      $("input:checkbox[name='industry']").prop( 'checked', false );
+      $('ul.tag-list').html('');
+      $('button.searchbtn-industry').html('業種を選ぶ');
+      
+    }
+    return false;
+  });
+
+  $('.modal-bg').on('click', function() {
+    if($("input:checkbox[name='industry']").prop( 'checked', false )){
+      
+      $("input:checkbox[name='industry']").prop( 'checked', false );
+      $('ul.tag-list').html('');
+      $('button.searchbtn-industry').html('業種を選ぶ');
+      
+    }
+    return false;
+  });
+});
+
+// タグ検索
+$(function() {
+  $('input[name="tag"]').on('change', function() {   
+    var tagItem = [];
+    var searchItem = [];
+    $('input[name="tag"]:checked').each(function() {
+      tagItem.push('<li class="tag-item">' + $(this).val() + '<span class="close"></span></li>');            
+      searchItem.push($(this).val() + '<span class="dot">, </span>');            
+    });
+    
+    $('ul.tag-list').html(tagItem);
+    $('button.searchbtn-tag').html(searchItem);
+  });
+  
+  $('.btn-clear').on('click', function() {
+    if($("input:checkbox[name='tag']").prop( 'checked', false )){
+      
+      $("input:checkbox[name='tag']").prop( 'checked', false );
+      $('ul.tag-list').html('');
+      $('button.searchbtn-tag').html('<span class="gray">指定なし</span>');
+
+      
+    }
+    return false;
+  });
+
+  $('.modal-close').on('click', function() {
+    if($("input:checkbox[name='tag']").prop( 'checked', false )){
+      
+      $("input:checkbox[name='tag']").prop( 'checked', false );
+      $('ul.tag-list').html('');
+      $('button.searchbtn-tag').html('<span class="gray">指定なし</span>');
+      
+    }
+    return false;
+  });
+
+  $('.modal-bg').on('click', function() {
+    if($("input:checkbox[name='tag']").prop( 'checked', false )){
+      
+      $("input:checkbox[name='tag']").prop( 'checked', false );
+      $('ul.tag-list').html('');
+      $('button.searchbtn-tag').html('<span class="gray">指定なし</span>');
+      
+    }
+    return false;
+  });
+});
+
 // TOPページのプロジェクトピックアップのスライド
 $('.pickup-slide').slick({
   autoplay: true,

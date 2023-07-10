@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>めちゃビズ</title>
+  <meta name="description" content="ページの説明">
+  <link rel="stylesheet" type="text/css" href="../../common/css/reset.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="../../common/css/base.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="../../common/css/common.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header>
+    <div class="header-inner">
+      <a href="../../top/top/index.html" class="header-logo-link">
+        <img class="header-logo-img" src="../../common/images/img_header_logo.png">
+      </a>
+      <nav class="header-gnav">
+        <ul class="c-gnav">
+          <li>
+            <a href="../../project/project_top/index.html">
+              <span>パートナーを探す</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../newsletter/newsletter_top/index.html">
+              <span>ニュースレター</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../about/about/index.html">
+              <span>このサイトについて</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../news/news_top/index.html">
+              <span>お知らせ</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../contact/contact_1/index.html">
+              <span>お問い合わせ</span>
+            </a>
+          </li>
+        </ul>
+        <a href="../../signin/signin/index.html" class="header-login">
+          <span>ログイン</span>
+        </a>
+        <a href="../../signup/signup_1/index.html" class="header-signup">
+          <img src="../../common/images/icn_signup.png" alt="">
+          <span>会員登録</span>
+        </a>
+        <!-- ハンバーガー -->
+        <div class="hamburger">
+          <button class="hamburger-btn" type="button">
+            <span class="hamburger-btn-center"></span>
+          </button>
+          <div class="hamburger-drawer">
+            <div class="hamburger-inner">
+              <ul class="hamburger-menu">
+                <li><a href="../../top/top/index.html">TOP</a></li>
+                <li><a href="../../project/project_top/index.html">パートナーを探す</a></li>
+                <li><a href="../../newsletter/newsletter_top/index.html">ニュースレター</a></li>
+                <li><a href="../../about/about/index.html">このサイトについて</a></li>
+                <li><a href="../../news/news_top/index.html">お知らせ</a></li>
+                <li><a href="../../contact/contact_1/index.html">お問い合わせ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- ページタイトル -->
+    <div class="page-title">
+      <div class="page-title-txt">
+        <h1>プロジェクト一覧</h1>
+        <p>ALL PROJECTS</p>
+      </div>
+      <div class="page-title-bg"></div>
+    </div>
+    <div class="main">
+      <!-- メインコンテンツ -->
+      <div class="main-inner">
+        <div class="single-topbtn-area">
+          <!-- プロジェクト一覧に戻るボタン -->
+          <button class="single-topbtn btn-back" type="button" onClick="history.back(); return false;">
+            <span>＜</span>プロジェクト一覧に戻る
+          </button>
+          <!-- お気に入り登録 -->
+          <button class="single-topbtn btn-fav" type="button">
+            <img src="../../common/images/icn_project_star.png" alt="">
+            お気に入り
+          </button>
+        </div>
+
+        <div class="single">
+          <p class="single-update">
+            <!-- 更新日時が入ります -->
+            <time class="single-update-time">2023年7月7日</time>
+            更新
+          </p>
+          <!-- プロジェクトのタイトルが入ります -->
+          <h2 class="single-heading">
+            タッチスキャンできる非接触型ICチップをカードの両面に埋め込める特許を取得しました。この新しい両面カードを利用した市場の開拓、量産、販売を支援していただける企業を探しています。
+          </h2>
+          <!-- プロジェクトのタグが並びます -->
+          <ul class="single-tag-area">
+            <li class="single-tag">中小企業</li>
+            <li class="single-tag">製品共同開発</li>
+            <li class="single-tag">リソース提供（既存技術の提供・特許流用の検討など）</li>
+            <li class="single-tag">1年以内</li>
+            <li class="single-tag">スタートアップ</li>
+          </ul>
+          <!-- プロジェクトの画像が入ります -->
+          <img class="single-img" src="../../common/images/test_pickup1.png" alt="プロジェクトの画像">
+        </div>
+        <!-- 会社名 -->
+        <p class="single-company">株式会社◯◯◯◯</p>
+        <div class="single-info">
+          <!-- 地域 -->
+          <p class="single-area">青森県</p>
+          <!-- 業種 -->
+          <p class="single-industry">半導体、ソフトウェア</p>
+        </div>
+        <hr class="single-line">
+        <!-- 自社の特徴 -->
+        <h3 class="single-feature">自社の特徴</h3>
+        <!-- 自社の特徴の内容 -->
+        <p class="single-feature-txt">
+          弊社は2013年に創業、クラウドサービスを活用したスマートフォンアプリを開発、国内・海外市場へ向けてリリースしています。アプリビジネスに加え、2018年、カードの両面に非接触型ICチップを埋め込む特許を取得、この量産・販売を目標としています。一昨年、中小企業庁の「ものづくり補助金」でこの両面カードとリーダーを試作し、現在はスマホアプリでカードの両面を読むアプリを開発、カードの改良を重ねています。
+        </p>
+        <!-- 解決したい課題 -->
+        <h3 class="single-problem">解決したい課題</h3>
+        <!-- 解決したい課題の内容 -->
+        <p class="single-problem-txt">
+          ・カードを読み込むリーダーは基本的にIoTデバイスもしくはスマートフォンを想定しているため、クラウドサーバーとのインターフェースしたソリューションビジネスを目標としています<br>
+          ・国内特許を取得してすぐに国際特許取得のためのPCT出願の手続きを行いました。この段階で国際予備審査が行われましたが同種の特許はないと報告を受けています。海外市場への進出も含めた取り組みを検討していただければと考えています。
+        </p>
+        <!-- 共創で実現したいこと -->
+        <h3 class="single-creation">共創で実現したいこと</h3>
+        <!-- 共創で実現したいことの内容 -->
+        <p class="single-creation-txt">
+          ・非接触型ICチップを両面に埋め込んだカードを量産し、国内・海外で販売を行いたい（1枚のカードで2種類の用途）<br>
+          例えば、、、<br>
+          　-海外で多くのカードに組み込まれているNFCチップと国内でメジャーなFelicaチップを裏表に組み込みグローバルなカードを提案<br>
+          　-クレジットカードの手書きサインをICチップ内に登録、店頭での商品購入時にタブレットへの電子サインとのマッチングを行う<br>
+          　-QR決済の時のチャージの際、電子サインをスマホで行うことで、カードのICチップの電子サインとマッチングをクラウドサーバー上で行い、本人確認をする（AIサービスによるサインのマッチングを想定）<br>
+          　-2種類のNFCカード（入館カード、タイムカード）を1枚のカードにまとめる
+          　-表は診察券＋裏はお薬手帳 (=> パーソナルヘルスケア)<br>
+          　-ドアに取り付けた２つのスマートロックをカードの裏表を使って、施錠・解錠
+          　-二人が一度に改札口を通過できるシステム（表は介護する人、裏は介護を受ける人など）<br>
+          　etc...
+        </p>
+        <!-- 企業情報 -->
+        <h3 class="single-companyinfo">企業情報</h3>
+        <table class="single-companyinfo-container">
+          <tr class="single-companyinfo-item">
+            <!-- 企業名が入ります -->
+            <th>企業名</th>
+            <td>株式会社◯◯◯◯</td>
+          </tr>
+          <tr class="single-companyinfo-item">
+            <!-- 事業内容が入ります -->
+            <th>事業内容</th>
+            <td>・スマートフォンアプリケーション設計・開発 ・AR、IoTアプリケーション設計・開発 ・データベースサーバーの設計・開発
+            ・保守 ・プロジェクトマネージメント支援</td>
+          </tr>
+          <tr class="single-companyinfo-item">
+            <!-- 所在地が入ります -->
+            <th>所在地</th>
+            <td>東京都世田谷◯◯◯◯5-14-11 COM305</td>
+          </tr>
+          <tr class="single-companyinfo-item">
+            <!-- 創立年月日が入ります -->
+            <th>創立年月日</th>
+            <td>2023年 7月</td>
+          </tr>
+          <tr class="single-companyinfo-item">
+            <!-- 代表者名が入ります -->
+            <th>代表者名</th>
+            <td>代表　太郎</td>
+          </tr>
+          <tr class="single-companyinfo-item">
+            <!-- 企業URLが入ります -->
+            <th>企業URL</th>
+            <!-- リンクも貼る -->
+            <td><a href="htttp://www.◯◯◯◯.com">htttp://www.◯◯◯◯.com</a></td>
+          </tr>
+          <tr class="single-companyinfo-item">
+            <!-- 従業員数が入ります -->
+            <th>従業員数</th>
+            <td>〜10人未満</td>
+          </tr>
+          <tr class="single-companyinfo-item">
+            <!-- 資本金が入ります -->
+            <th>資本金</th>
+            <td>◯◯◯◯万円</td>
+          </tr>
+          <tr class="single-companyinfo-item">
+            <!-- 主要顧客が入ります -->
+            <th>主要顧客</th>
+            <td>スタートアップ各社、一般顧客</td>
+          </tr>
+          <tr class="single-companyinfo-item">
+            <!-- 上場区分が入ります -->
+            <th>上場区分</th>
+            <td>非上場</td>
+          </tr>
+          <tr class="single-companyinfo-item">
+            <!-- 外資区分が入ります -->
+            <th>外資区分</th>
+            <td>非外資</td>
+          </tr>
+        </table>
+        <!-- ニュースレター -->
+        <h3 class="single-newsletter">ニュースレター</h3>
+        <ul class="single-newsletter-container">
+          <!-- ニュースレター記事 -->
+          <li class="single-newsletter-item">
+            <!-- ニュースレターの画像 -->
+            <img src="../../common/images/test_pickup1.png" alt="" class="single-newsletter-img">
+            <!-- ニュースレターのタイトル -->
+            <h3 class="single-newsletter-txt">
+              ニュースレターのタイトルです。ニュースレターのタイトルです。ニュースレターのタイトルです。...
+            </h3>
+            <!-- ニュースレターの投稿日時 -->
+            <time class="single-newsletter-time">2023年7月7日</time>
+          </li>
+          <!-- ニュースレター記事 -->
+          <li class="single-newsletter-item">
+            <!-- ニュースレターの画像 -->
+            <img src="../../common/images/test_pickup1.png" alt="" class="single-newsletter-img">
+            <!-- ニュースレターのタイトル -->
+            <h3 class="single-newsletter-txt">
+              ニュースレターのタイトルです。ニュースレターのタイトルです。ニュースレターのタイトルです。...
+            </h3>
+            <!-- ニュースレターの投稿日時 -->
+            <time class="single-newsletter-time">2023年7月7日</time>
+          </li>
+          <!-- ニュースレター記事 -->
+          <li class="single-newsletter-item">
+            <!-- ニュースレターの画像 -->
+            <img src="../../common/images/test_pickup1.png" alt="" class="single-newsletter-img">
+            <!-- ニュースレターのタイトル -->
+            <h3 class="single-newsletter-txt">
+              ニュースレターのタイトルです。ニュースレターのタイトルです。ニュースレターのタイトルです。...
+            </h3>
+            <!-- ニュースレターの投稿日時 -->
+            <time class="single-newsletter-time">2023年7月7日</time>
+          </li>
+          <!-- ニュースレター記事 -->
+          <li class="single-newsletter-item">
+            <!-- ニュースレターの画像 -->
+            <img src="../../common/images/test_pickup1.png" alt="" class="single-newsletter-img">
+            <!-- ニュースレターのタイトル -->
+            <h3 class="single-newsletter-txt">
+              ニュースレターのタイトルです。ニュースレターのタイトルです。ニュースレターのタイトルです。...
+            </h3>
+            <!-- ニュースレターの投稿日時 -->
+            <time class="single-newsletter-time">2023年7月7日</time>
+          </li>
+          <!-- ニュースレター記事 -->
+          <li class="single-newsletter-item">
+            <!-- ニュースレターの画像 -->
+            <img src="../../common/images/test_pickup1.png" alt="" class="single-newsletter-img">
+            <!-- ニュースレターのタイトル -->
+            <h3 class="single-newsletter-txt">
+              ニュースレターのタイトルです。ニュースレターのタイトルです。ニュースレターのタイトルです。...
+            </h3>
+            <!-- ニュースレターの投稿日時 -->
+            <time class="single-newsletter-time">2023年7月7日</time>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 下部固定エリア -->
+    <div class="single-bottom">
+      <div class="single-bottom-inner">
+        <div class="single-bottom-l">
+          <!-- 担当者へメッセージ -->
+          <button class="single-bottom-message" type="button">
+            担当者にメッセージを送る
+          </button>
+          <!-- お気に入り登録 -->
+          <button class="single-bottom-fav" type="button">
+            <img src="../../common/images/icn_project_star.png" alt="">
+            お気に入り
+          </button>
+        </div>
+          <!-- 運営に問い合わせる -->
+        <button class="single-bottom-contact" type="button">
+          運営に問い合わせる
+        </button>
+      </div>
+    </div>
+  </main>
+<!-- フッター -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-contents">
+      <img class="footer-logo" src="../../common/images/img_header_logo_w.png">
+      <nav class="footer-gnav">
+        <ul class="r-gnav">
+          <li>
+            <a href="">
+              <span>パートナーを探す</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>ニュースレター</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>このサイトについて</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>お知らせ</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>お問い合わせ</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>ログイン</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>会員登録</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-adress">〒000-0000 東京都渋谷区XXX</p>
+      <a class="footer-policy" href="../../policy/index.html" target="_blank">サイトポリシー</a>
+    </div>
+    <p class="copyright">© めちゃビズ All Rights Reserved</p>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="../../common/js/common.js"></script>
+</body>
+
+</html>

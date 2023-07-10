@@ -398,8 +398,6 @@ header {
     }
 
     // クリック後
-    &-btn.active {
-    }
 
     &-btn.active:before {
       transform: translateY(9px) rotate(45deg);
@@ -684,7 +682,7 @@ header {
     .copyright {
       width: 100%;
       text-align: center;
-      color: #cccccc;
+      color: #ccc;
       font-size: 12px;
       font-weight: 500;
       margin-top: 32px;

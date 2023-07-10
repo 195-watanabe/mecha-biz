@@ -1,9 +1,1032 @@
 @use "../../common/scss/mixin" as *;
 
+.main {
+  width: 100vw;
 
+  &-inner {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+.search {
+  width: 100%;
+  margin: 32px auto;
+  padding: 32px 28px;
+  border-radius: 10px;
+  background-color: #f9fafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  &-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-l {
+    width: 440px;
+    list-style: none;
+
+    li {
+      position: relative;
+      background-color: #fff;
+      border-radius: 10px;
+      width: 100%;
+      margin-bottom: 10px;
+      
+      &:last-child {
+        margin-bottom: 0px;
+      }
+      
+      p {
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        transform: translateY(-50%);
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      
+      button {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        color: #000;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: right;
+        border: 2px solid #ccc;
+        background-color: transparent;
+        border-radius: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
+        padding: 20px 40px 20px 120px;
+        z-index: 2;
+
+        span:last-child {
+          display: none;
+        }
+
+        span.gray {
+          display: inline-block;
+          color: #aaa;
+        }
+      }
+
+      img {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        transform: translateY(-50%);
+        width: 10px;
+        z-index: 0;
+      }
+    }
+  }
+
+  &-r {
+    width: 380px;
+    height: 212px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-count {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+
+    p {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    &-number {
+      margin-top: 16px;
+
+      span {
+        @include lato;
+        font-weight: 700;
+        font-size: 28px;
+        margin-right: 6px;
+      }
+    }
+  }
+
+  // フリーワード検索
+  &-keyword {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-left: 14px;
+
+    &-input {
+      border: none;
+      width: 100%;
+      font-size: 14px;
+      font-weight: 500;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    &-btn {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 56px;
+      border: none;
+      border-radius: 10px;
+      background-color: $green;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, .14);
+      cursor: pointer;
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  // 検索ボタン
+  &-btn {
+    width: 260px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .14);
+    cursor: pointer;
+
+    &-area {
+      margin-top: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &.btn-reset {
+      background-color: #aaa;
+      margin-right: 16px;
+    }
+
+    &.btn-search {
+      background-color: $green;
+    }
+  }
+}
+
+// モーダルウインドウ
+.modal {
+position: absolute;
+top: 40px;
+left: 50%;
+width: 780px;
+transform: translateX(-50%);
+background-color: #fff;
+opacity: 0;
+visibility: hidden;
+transition: .3s ease;
+z-index: 1000;
+border-radius: 10px;
+
+
+  // 地域検索モーダル
+  &-area.modal-open {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // 業種検索モーダル
+  &-industry.modal-open {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // 検索タグ検索モーダル
+  &-tag.modal-open {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &-inner {
+    width: 100%;
+    position: relative;
+  }
+
+  &-heading {
+    position: relative;
+    background-color: $green;
+    padding: 20px 30px;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &-close {
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    transform: translateY(-50%);
+    color: #fff;
+    @include lato;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  &-wrapper {
+    width: 100%;
+    background-color: #fff;
+    height: 60vh;
+    padding: 32px;
+    overflow: scroll;
+  }
+}
+
+// アコーディオンメニュー
+.accordion {
+  position: relative;
+  width: 100%;
+
+  &-ttl {
+    position: relative;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 16px 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    
+    img {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      width: 10px;
+      transition: .3s;
+    }
+    
+    &.open {
+      img {
+        transform: translateY(-50%) rotate(90deg);
+      }
+    }
+  }
+  
+  &-sub-ttl {
+    position: absolute;
+    top: -17px;
+    left: -21px;
+    width: 716px;
+    color: #000;
+    font-size: 14px;
+    font-size: 500;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 16px 20px;
+    
+    &-area {
+      position: relative;
+      width: 100%;
+      height: 32px;
+      margin-bottom: 16px;
+    }
+  }
+  
+  &-content {
+    display: none;
+    padding: 16px 20px 0;
+    border: 1px solid #ccc;
+    background-color: #f9fafc;
+
+    
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      list-style: none;
+      
+      li {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        width: calc(25% - 24px);
+        margin: 0 16px 32px 0;
+
+        input {
+          width: 16px;
+          height: 16px;
+          margin: 3px 0 0;
+        }
+        
+        label {
+          display: inline-block;
+          width: 120px;
+          font-size: 14px;
+          line-height: 1.6em;
+          font-weight: 500;
+          padding-left: 8px;
+        }
+
+      }
+
+      &.three-columns {
+        li {
+          width: calc(33.333% - 24px);
+
+          label {
+            width: 184px;
+          }
+        }
+      }
+    }
+  }
+  
+  // モーダル下部
+  &-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    z-index: 1001;
+  }
+}
+
+// タグリスト
+.tag-area {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  p {
+    width: 90px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 8px;
+  }
+}
+
+.tag-list {
+  width: 260px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 16px;
+
+  li {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 8px;
+    word-break: break-all;
+  }
+}
+
+// モーダルボタン
+.modal {
+  &-btn-box {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-btn {
+    display: inline-block;
+    color: #fff;
+    padding: 20px 18px;
+    border: none;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .14);
+    cursor: pointer;
+  }
+
+  .btn-clear {
+    background-color: #ccc;
+  }
+
+  .btn-submit {
+    background-color: $green;
+  }
+
+  &-bg {
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    z-index: 200;
+    overflow: hidden;
+    background-color: rgba($color: #000000, $alpha: .5);
+  }
+
+  &-bg.modal-open {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// 新着プロジェクト
+.new {
+  position: relative;
+  width: 100%;
+  margin: 64px 0;
+
+  h2 {
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &-morebtn {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    width: 540px;
+    background-color: #fff;
+    border: 2px solid $green;
+    border-radius: 10px;
+    padding: 18px;
+    color: $green;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .06;
+    margin: 48px auto;
+  }
+}
+
+.project {
+  
+  &-list {
+    list-style: none;
+    width: 100%;
+    margin: 32px 0;
+    
+    &-item {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 48px;
+      box-shadow: 4px 4px 28px 1px rgba(102, 197, 165, 0.4);
+    }
+  }
+  
+  &-container {
+    border-radius: 16px;
+    padding: 32px;
+    background-color: #fff;
+
+    h3 {
+      width: 100%;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.6em;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 24px;
+
+    img {
+      display: block;
+      width: 280px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  &-r {
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  &-taglist {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
+      background-color: $green;
+      border-radius: 6px;
+      padding: 10px 16px;
+      margin-right: 4px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &-info {
+    display: flex;
+    margin-top: 24px;
+  }
+
+  &-area {
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 10px;
+    border-right: 1.5px solid #000;
+  }
+
+  &-industry {
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 10px;
+  }
+  
+  &-company {
+    font-size: 18px;
+    letter-spacing: .1em;
+    font-weight: 700;
+    margin-top: 24px;
+  }
+  
+  &-feature {
+    padding: 18px;
+    margin-top: 16px;
+    border-radius: 10px;
+    background-color: #f9fafc;
+    
+    &-ttl {
+      font-size: 18px;
+      letter-spacing: .1em;
+      font-weight: 700;
+      line-height: 1.6em;
+    }
+
+    &-txt {
+      font-size: 14px;
+      letter-spacing: .1em;
+      font-weight: 500;
+      line-height: 1.6em;
+      margin-top: 18px;
+    }
+  }
+  
+  &-problem {
+    padding: 18px;
+    margin-top: 16px;
+    border-radius: 10px;
+    background-color: #f9fafc;
+    
+    &-ttl {
+      font-size: 18px;
+      letter-spacing: .1em;
+      font-weight: 700;
+      line-height: 1.6em;
+    }
+
+    &-txt {
+      font-size: 14px;
+      letter-spacing: .1em;
+      font-weight: 500;
+      line-height: 1.6em;
+      margin-top: 18px;
+    }
+  }
+
+  &-morebtn {
+    position: relative;
+    padding: 32px;
+    border-radius: 0 0 16px 16px;
+    background-image: linear-gradient(90deg, #47a384, #20b6bf);
+    
+    a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 0 0 16px 16px;
+      top: 0;
+      left: 0;
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      color: #fff;
+      font-size: 18px;
+      letter-spacing: .08em;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+}
+
+// 記事詳細ページ
+.single {
+  width: 100%;
+
+  &-topbtn-area {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+  }
+
+  &-topbtn {
+    min-width: 200px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 28px;
+    border: 1.5px solid $green;
+    border-radius: 10px;
+    background-color: #fff;
+    color: $green;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    
+    span {
+      color: $green;
+      font-size: 14px;
+      font-weight: 500;
+      margin-right: 14px;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 14px;
+    }
+  }
+
+  &-update {
+    color: #aaa;
+    font-size: 14px;
+    font-weight: 500;
+
+    &-time {
+      margin-right: 14px;
+    }
+  }
+
+  &-heading {
+    font-size: 28px;
+    line-height: 1.6em;
+    margin-top: 16px;
+  }
+
+  &-tag {
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: $green;
+    border-radius: 6px;
+    padding: 10px 16px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+
+    &-area {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+  }
+
+  &-img {
+    width: 960px;
+    height: 440px;
+    object-fit: cover;
+    margin-top: 32px;
+  }
+
+  &-company {
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: .1em;
+    font-weight: 700;
+    margin: 40px 18px 0;
+  }
+
+  &-info {
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  &-area {
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 10px;
+    border-right: 1.5px solid #000;
+  }
+
+  &-industry {
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 10px;
+  }
+
+  &-line {
+    border-top: 1px solid #aaa;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  &-feature {
+    color: $green;
+    font-size: 26px;
+    letter-spacing: .1em;
+    font-weight: 500;
+    line-height: 1.6em;
+    
+    &-txt {
+      padding: 20px;
+      border: 1px solid #aaa;
+      border-radius: 10px;
+      word-break: break-all;
+      font-size: 16px;
+      letter-spacing: .1em;
+      font-weight: 400;
+      line-height: 2em;
+      margin-top: 20px;
+    }
+  }
+
+  &-problem {
+    margin-top: 40px;
+    color: $green;
+    font-size: 26px;
+    letter-spacing: .1em;
+    font-weight: 500;
+    line-height: 1.6em;
+    
+    &-txt {
+      padding: 20px;
+      border: 1px solid #aaa;
+      border-radius: 10px;
+      word-break: break-all;
+      font-size: 16px;
+      letter-spacing: .1em;
+      font-weight: 400;
+      line-height: 2em;
+      margin-top: 20px;
+    }
+  }
+
+  &-creation {
+    margin-top: 40px;
+    color: $green;
+    font-size: 26px;
+    letter-spacing: .1em;
+    font-weight: 500;
+    line-height: 1.6em;
+    
+    &-txt {
+      padding: 20px;
+      border: 1px solid #aaa;
+      border-radius: 10px;
+      word-break: break-all;
+      font-size: 16px;
+      letter-spacing: .1em;
+      font-weight: 400;
+      line-height: 2em;
+      margin-top: 20px;
+    }
+  }
+
+  // 企業情報
+  &-companyinfo {
+    margin-top: 40px;
+    font-size: 26px;
+    letter-spacing: .1em;
+    font-weight: 500;
+    line-height: 1.6em;
+
+    &-container {
+      width: 100%;
+      margin-top: 24px;
+    }
+  
+    &-item {
+      font-size: 18px;
+      text-align: left;
+      border-top: 1px solid #aaa;
+      border-bottom: 1px solid #aaa;
+  
+      th {
+        vertical-align: middle;
+        padding: 28px 0;
+        width: 160px;
+        font-weight: 500;
+      }
+      
+      td {
+        vertical-align: middle;
+        padding: 28px 0;
+        font-weight: 400;
+        line-height: 1.6em;
+      }
+
+      a {
+        color: #006CFF;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-newsletter {
+    margin-top: 40px;
+    font-size: 26px;
+    letter-spacing: .1em;
+    font-weight: 500;
+    line-height: 1.6em;
+
+    &-container {
+      width: 100%;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px 12px;
+      margin-top: 24px;
+      margin-bottom: 48px;
+    }
+    
+    &-item {
+      border-radius: 10px;
+      box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, .14);
+      padding-bottom: 16px;
+    }
+
+    &-img {
+      width: 100%;
+      height: 160px;
+      border-radius: 10px 10px 0 0;
+
+    }
+
+    &-txt {
+      width: 100%;
+      padding: 16px;
+      font-size: 16px;
+      word-wrap: break-word;
+      letter-spacing: .1em;
+      font-weight: 500;
+      line-height: 1.6em;
+    }
+    
+    &-time {
+      width: 100%;
+      padding: 0 16px ;
+      color: #aaa;
+      font-size: 13px;
+      letter-spacing: .1em;
+      font-weight: 500;
+    }
+  }
+
+  // 下部固定エリア
+  &-bottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 1000;
+    padding: 20px;
+    background-color: #efefef;
+    
+    &-inner {
+      width: 960px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    &-l {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 50%;
+    }
+
+    &-message {
+      height: 50px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 28px;
+      border: 1.5px solid $green;
+      border-radius: 10px;
+      background-color: $green;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    &-fav {
+      min-width: 200px;
+      height: 50px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 28px;
+      border: 1.5px solid $green;
+      border-radius: 10px;
+      background-color: #fff;
+      color: $green;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+
+      span {
+        color: $green;
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 14px;
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 14px;
+      }
+    }
+
+    &-contact {
+      height: 50px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 28px;
+      border: 1.5px solid #aaa;
+      border-radius: 10px;
+      background-color: #fff;
+      color: #aaa;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+}
+
+// footer調整
+.footer {
+  padding-bottom: 98px;
+}
 
 // レスポンシブ
 // スマホサイズ
 @include mq(sm) {
-  
+  .main {
+    width: 100%;
+  }
 }
