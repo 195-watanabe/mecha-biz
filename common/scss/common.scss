@@ -32,6 +32,44 @@
   }
 }
 
+// ページネーション
+.pagenation {
+  display: flex;
+  justify-content: center;
+  margin: 48px 0;
+
+  &-number {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    @include lato;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    text-decoration: none;
+    margin: 0 4px;
+    border-radius: 4px;
+
+    &.current {
+      background-color: #22B5BE;
+      color: #fff ;
+    }
+
+    &.dots {
+      border: none;
+    }
+
+    &.prev,
+    &.next {
+      @include noto;
+      padding: 0 8px;
+    }
+  }
+}
+
 // 入力ステップ
 .formstep {
   display: flex;
@@ -89,6 +127,7 @@
 // 入力フォーム
 .formset {
   display: block;
+  width: 100%;
   margin-top: 32px;
 
   &-title {
@@ -105,15 +144,20 @@
     margin-top: 16px;
     line-height: 1.6;
 
-    input {
+    input,
+    select,
+    textarea {
+      box-sizing: border-box;
+      display: block;
       font-size: 16px;
       letter-spacing: .08em;
-      width: 480px;
+      width: 100%;
       padding: 16px;
       border: 1px solid #3E3F40;
       border-radius: 8px;
     }
   }
+
 
   // フォームボタン
   &-buttons {
@@ -133,6 +177,10 @@
     padding: 16px;
     border: 0 solid #fff;
     border-radius: 8px;
+
+    &.contact-btn {
+      width: 220px;
+    }
   }
   // ログインはこちら
   &-login-btn {
@@ -177,7 +225,8 @@
 }
 
 // 同意テキスト
-.agreement-txt {
+.agreement-txt,
+.forgot-txt {
   display: flex;
   flex-wrap: wrap;
   margin-top: 32px;
@@ -198,7 +247,7 @@
 
   &-inner {
     width: 700px;
-    margin: 0 auto;
+    margin: 64px auto 0;
   }
 
   &-heading {
@@ -332,7 +381,8 @@
   }
 
   // 同意テキスト
-  .agreement-txt {
+  .agreement-txt,
+  .forgot-txt {
     display: block;
     margin-top: 24px;
     font-size: 12px;
@@ -341,6 +391,7 @@
 
   // サンクスページ
   .thanks {
+    margin: 16px auto 0;
     padding-bottom: 32px;
 
     &-inner {

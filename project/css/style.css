@@ -170,12 +170,17 @@
   background-color: #22b5be;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .modal {
   position: absolute;
-  top: 40px;
+  position: fixed;
+  top: calc(50% - 45px);
   left: 50%;
+  transform: translate(-50%, -50%);
   width: 780px;
-  transform: translateX(-50%);
   background-color: #fff;
   opacity: 0;
   visibility: hidden;
@@ -423,12 +428,30 @@
   margin: 48px auto;
 }
 
-.project-list {
+.result {
+  position: relative;
+  width: 100%;
+  margin: 64px 0;
+}
+.result h2 {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  display: inline-block;
+  margin-right: 12px;
+}
+.result-num {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.project-all {
   list-style: none;
   width: 100%;
   margin: 32px 0;
 }
-.project-list-item {
+.project-all-item {
   width: 100%;
   border-radius: 16px;
   margin-bottom: 48px;

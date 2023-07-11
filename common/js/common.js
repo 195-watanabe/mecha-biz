@@ -7,6 +7,7 @@ $(".hamburger-btn").click(function () {//ボタンがクリックされたら
 
 // プロジェクト検索のモーダル
 $(".searchbtn").click(function () {//ボタンがクリックされたら
+  $('body').addClass('modal-open');//modal-openクラスを付与
   $('.modal-bg').addClass('modal-open');//modal-openクラスを付与
 });
 
@@ -22,17 +23,24 @@ $(".searchbtn-tag").click(function () {//業種検索ボタンがクリックさ
   $('.modal-tag').addClass('modal-open');//modal-openクラスを付与
 });
 
+$(".searchbtn-newsletter").click(function () {//業種検索ボタンがクリックされたら
+  $('.modal-newsletter').addClass('modal-open');//modal-openクラスを付与
+});
+
 $(".modal-bg").click(function () {//背景がクリックされたら
+  $('body').removeClass('modal-open');//クラス削除
   $('.modal-bg').removeClass('modal-open');//クラス削除
   $('.modal').removeClass('modal-open');//クラス削除
 });
 
 $(".modal-close").click(function () {//closeボタンがクリックされたら
+  $('body').removeClass('modal-open');//クラス削除
   $('.modal-bg').removeClass('modal-open');//クラス削除
   $('.modal').removeClass('modal-open');//クラス削除
 });
 
 $(".btn-submit").click(function () {//closeボタンがクリックされたら
+  $('body').removeClass('modal-open');//クラス削除
   $('.modal-bg').removeClass('modal-open');//クラス削除
   $('.modal').removeClass('modal-open');//クラス削除
 });
@@ -185,6 +193,55 @@ $(function() {
       $("input:checkbox[name='tag']").prop( 'checked', false );
       $('ul.tag-list').html('');
       $('button.searchbtn-tag').html('<span class="gray">指定なし</span>');
+      
+    }
+    return false;
+  });
+});
+
+// ニュースレターのタグ検索
+$(function() {
+  $('input[name="newsletter"]').on('change', function() {   
+    var newsletterItem = [];
+    var searchItem = [];
+    $('input[name="newsletter"]:checked').each(function() {
+      newsletterItem.push('<li class="newsletter-item">' + $(this).val() + '<span class="close"></span></li>');            
+      searchItem.push($(this).val() + '<span class="dot">, </span>');            
+    });
+    
+    $('ul.newsletter-list').html(newsletterItem);
+    $('button.searchbtn-newsletter').html(searchItem);
+  });
+  
+  $('.btn-clear').on('click', function() {
+    if($("input:checkbox[name='newsletter']").prop( 'checked', false )){
+      
+      $("input:checkbox[name='newsletter']").prop( 'checked', false );
+      $('ul.newsletter-list').html('');
+      $('button.searchbtn-newsletter').html('<span class="gray">指定なし</span>');
+
+      
+    }
+    return false;
+  });
+
+  $('.modal-close').on('click', function() {
+    if($("input:checkbox[name='newsletter']").prop( 'checked', false )){
+      
+      $("input:checkbox[name='newsletter']").prop( 'checked', false );
+      $('ul.newsletter-list').html('');
+      $('button.searchbtn-newsletter').html('<span class="gray">指定なし</span>');
+      
+    }
+    return false;
+  });
+
+  $('.modal-bg').on('click', function() {
+    if($("input:checkbox[name='newsletter']").prop( 'checked', false )){
+      
+      $("input:checkbox[name='newsletter']").prop( 'checked', false );
+      $('ul.newsletter-list').html('');
+      $('button.searchbtn-newsletter').html('<span class="gray">指定なし</span>');
       
     }
     return false;

@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>めちゃビズ</title>
+  <meta name="description" content="ページの説明">
+  <link rel="stylesheet" type="text/css" href="../../common/css/reset.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="../../common/css/base.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="../../common/css/common.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header>
+    <div class="header-inner">
+      <a href="../../top/top/index.html" class="header-logo-link">
+        <img class="header-logo-img" src="../../common/images/img_header_logo.png">
+      </a>
+      <nav class="header-gnav">
+        <ul class="c-gnav">
+          <li>
+            <a href="../../project/project_top/index.html">
+              <span>パートナーを探す</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../newsletter/newsletter_top/index.html">
+              <span>ニュースレター</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../about/about/index.html">
+              <span>このサイトについて</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../news/news_top/index.html">
+              <span>お知らせ</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../contact/contact_1/index.html">
+              <span>お問い合わせ</span>
+            </a>
+          </li>
+        </ul>
+        <a href="../../signin/signin/index.html" class="header-login">
+          <span>ログイン</span>
+        </a>
+        <a href="../../signup/signup_1/index.html" class="header-signup">
+          <img src="../../common/images/icn_signup.png" alt="">
+          <span>会員登録</span>
+        </a>
+        <!-- ハンバーガー -->
+        <div class="hamburger">
+          <button class="hamburger-btn" type="button">
+            <span class="hamburger-btn-center"></span>
+          </button>
+          <div class="hamburger-drawer">
+            <div class="hamburger-inner">
+              <ul class="hamburger-menu">
+                <li><a href="../../top/top/index.html">TOP</a></li>
+                <li><a href="../../project/project_top/index.html">パートナーを探す</a></li>
+                <li><a href="../../newsletter/newsletter_top/index.html">ニュースレター</a></li>
+                <li><a href="../../about/about/index.html">このサイトについて</a></li>
+                <li><a href="../../news/news_top/index.html">お知らせ</a></li>
+                <li><a href="../../contact/contact_1/index.html">お問い合わせ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- ページタイトル -->
+    <div class="page-title">
+      <div class="page-title-txt">
+        <h1>プロジェクト一覧</h1>
+        <p>ALL PROJECTS</p>
+      </div>
+      <div class="page-title-bg"></div>
+    </div>
+    <div class="main">
+      <div class="main-inner">
+        <!-- 検索フォーム -->
+        <div class="search">
+          <div class="search-inner">
+            <ul class="search-l">
+              <!-- 地域 -->
+              <li>
+                <p>地域</p>
+                <button class="searchbtn searchbtn-area" type="button">地域を選ぶ</button>
+                <img src="../../common/images/icn_project_arrow.png" alt="">
+              </li>
+              <!-- 業種 -->
+              <li>
+                <p>業種</p>
+                <button class="searchbtn searchbtn-industry" type="button">業種を選ぶ</button>
+                <img src="../../common/images/icn_project_arrow.png" alt="">
+              </li>
+              <!-- 検索タグ -->
+              <li>
+                <p>検索タグ</p>
+                <button class="searchbtn searchbtn-tag" type="button"><span class="gray">指定なし</span></button>
+                <img src="../../common/images/icn_project_arrow.png" alt="">
+              </li>
+            </ul>
+            <div class="search-r">
+              <div class="search-count">
+                <p class="search-count-txt">プロジェクト数</p>
+                <!-- ここに検索件数を表示 -->
+                <p class="search-count-number"><span>1,234</span>件</p>
+              </div>
+              <form>
+                <!-- フリーワード検索 -->
+                <div class="search-keyword">
+                  <input class="search-keyword-input" placeholder="フリーワード検索" type="text" name="keyword">
+                  <button class="search-keyword-btn" type="text">
+                    <img src="../../common/images/icn_serch.png" alt="虫眼鏡マーク">
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- 検索ボタン -->
+          <div class="search-btn-area">
+            <button class="search-btn btn-reset  btn-clear">条件をリセット</button>
+            <button class="search-btn btn-search" type="button"
+              onclick="location.href='../project_result/index.html'">検索する</button>
+          </div>
+        </div>
+        <!-- ここからモーダルウインドウ -->
+        <!-- 地域検索プルダウン -->
+        <div class="modal modal-area">
+          <div class="modal-inner">
+            <h2 class="modal-heading">
+              地域を選択してください
+              <div class="modal-close">x</div>
+            </h2>
+            <div class="modal-wrapper">
+              <!-- アコーディオンエリア -->
+              <div class="accordion">
+                <div class="accordion-container">
+                  <!-- 北海道・東北 -->
+                  <div class="accordion-item">
+                    <!-- アコーディオンタイトル -->
+                    <h3 class="accordion-ttl">
+                      北海道・東北
+                      <img src="../../common/images/icn_project_arrow.png" alt="">
+                    </h3>
+                    <!-- アコーディオンコンテンツ -->
+                    <div class="accordion-content">
+                      <ul>
+                        <li>
+                          <input type="checkbox" name="area" value="北海道" id="北海道">
+                          <label for="北海道">北海道</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="青森" id="青森">
+                          <label for="青森">青森</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="岩手" id="岩手">
+                          <label for="岩手">岩手</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="宮城" id="宮城">
+                          <label for="宮城">宮城</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="秋田" id="秋田">
+                          <label for="秋田">秋田</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="山形" id="山形">
+                          <label for="山形">山形</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="福島" id="福島">
+                          <label for="福島">福島</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- 関東 -->
+                  <div class="accordion-item">
+                    <!-- アコーディオンタイトル -->
+                    <h3 class="accordion-ttl">
+                      関東
+                      <img src="../../common/images/icn_project_arrow.png" alt="">
+                    </h3>
+                    <!-- アコーディオンコンテンツ -->
+                    <div class="accordion-content">
+                      <ul>
+                        <li>
+                          <input type="checkbox" name="area" value="茨城" id="茨城">
+                          <label for="茨城">茨城</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="栃木" id="栃木">
+                          <label for="栃木">栃木</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="群馬" id="群馬">
+                          <label for="群馬">群馬</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="埼玉" id="埼玉">
+                          <label for="埼玉">埼玉</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="千葉" id="千葉">
+                          <label for="千葉">千葉</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="東京" id="東京">
+                          <label for="東京">東京</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="神奈川" id="神奈川">
+                          <label for="神奈川">神奈川</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- 中部 -->
+                  <div class="accordion-item">
+                    <!-- アコーディオンタイトル -->
+                    <h3 class="accordion-ttl">
+                      中部
+                      <img src="../../common/images/icn_project_arrow.png" alt="">
+                    </h3>
+                    <!-- アコーディオンコンテンツ -->
+                    <div class="accordion-content">
+                      <ul>
+                        <li>
+                          <input type="checkbox" name="area" value="新潟" id="新潟">
+                          <label for="新潟">新潟</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="富山" id="富山">
+                          <label for="富山">富山</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="石川" id="石川">
+                          <label for="石川">石川</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="福井" id="福井">
+                          <label for="福井">福井</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="山梨" id="山梨">
+                          <label for="山梨">山梨</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="長野" id="長野">
+                          <label for="長野">長野</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="岐阜" id="岐阜">
+                          <label for="岐阜">岐阜</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="静岡" id="静岡">
+                          <label for="静岡">静岡</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="愛知" id="愛知">
+                          <label for="愛知">愛知</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- 近畿 -->
+                  <div class="accordion-item">
+                    <!-- アコーディオンタイトル -->
+                    <h3 class="accordion-ttl">
+                      近畿
+                      <img src="../../common/images/icn_project_arrow.png" alt="">
+                    </h3>
+                    <!-- アコーディオンコンテンツ -->
+                    <div class="accordion-content">
+                      <ul>
+                        <li>
+                          <input type="checkbox" name="area" value="三重" id="三重">
+                          <label for="三重">三重</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="滋賀" id="滋賀">
+                          <label for="滋賀">滋賀</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="京都" id="京都">
+                          <label for="京都">京都</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="大阪" id="大阪">
+                          <label for="大阪">大阪</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="兵庫" id="兵庫">
+                          <label for="兵庫">兵庫</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="奈良" id="奈良">
+                          <label for="奈良">奈良</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="和歌山" id="和歌山">
+                          <label for="和歌山">和歌山</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- 中国 -->
+                  <div class="accordion-item">
+                    <!-- アコーディオンタイトル -->
+                    <h3 class="accordion-ttl">
+                      中国
+                      <img src="../../common/images/icn_project_arrow.png" alt="">
+                    </h3>
+                    <!-- アコーディオンコンテンツ -->
+                    <div class="accordion-content">
+                      <ul>
+                        <li>
+                          <input type="checkbox" name="area" value="鳥取" id="鳥取">
+                          <label for="鳥取">鳥取</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="島根" id="島根">
+                          <label for="島根">島根</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="岡山" id="岡山">
+                          <label for="岡山">岡山</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="広島" id="広島">
+                          <label for="広島">広島</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="山口" id="山口">
+                          <label for="山口">山口</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- 四国 -->
+                  <div class="accordion-item">
+                    <!-- アコーディオンタイトル -->
+                    <h3 class="accordion-ttl">
+                      四国
+                      <img src="../../common/images/icn_project_arrow.png" alt="">
+                    </h3>
+                    <!-- アコーディオンコンテンツ -->
+                    <div class="accordion-content">
+                      <ul>
+                        <li>
+                          <input type="checkbox" name="area" value="徳島" id="徳島">
+                          <label for="徳島">徳島</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="香川" id="香川">
+                          <label for="香川">香川</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="愛媛" id="愛媛">
+                          <label for="愛媛">愛媛</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="高知" id="高知">
+                          <label for="高知">高知</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- 九州・沖縄 -->
+                  <div class="accordion-item">
+                    <!-- アコーディオンタイトル -->
+                    <h3 class="accordion-ttl">
+                      九州・沖縄
+                      <img src="../../common/images/icn_project_arrow.png" alt="">
+                    </h3>
+                    <!-- アコーディオンコンテンツ -->
+                    <div class="accordion-content">
+                      <ul>
+                        <li>
+                          <input type="checkbox" name="area" value="福岡" id="福岡">
+                          <label for="福岡">福岡</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="佐賀" id="佐賀">
+                          <label for="佐賀">佐賀</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="長崎" id="長崎">
+                          <label for="長崎">長崎</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="熊本" id="熊本">
+                          <label for="熊本">熊本</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="大分" id="大分">
+                          <label for="大分">大分</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="宮崎" id="宮崎">
+                          <label for="宮崎">宮崎</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="鹿児島" id="鹿児島">
+                          <label for="鹿児島">鹿児島</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="area" value="沖縄" id="沖縄">
+                          <label for="沖縄">沖縄</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-footer">
+              <div class="tag-area">
+                <p>選択した項目:</p>
+                <ul class="tag-list"></ul>
+              </div>
+              <ul class="modal-btn-box">
+                <li>
+                  <!-- リセットボタン -->
+                  <div class="clear-box"><a class="modal-btn btn-clear">項目をリセット</a></div>
+                </li>
+                <li>
+                  <!-- 検索ボタン -->
+                  <div class="submit-btn"><button id="submit" type="submit"
+                      class="modal-btn btn-submit">この条件で検索</button></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 業種検索プルダウン -->
+        <div class="modal modal-industry">
+          <div class="modal-inner">
+            <h2 class="modal-heading">
+              業種を選択してください
+              <div class="modal-close">x</div>
+            </h2>
+            <div class="modal-wrapper">
+              <!-- アコーディオンエリア -->
+              <div class="accordion">
+                <div class="accordion-container">
+                  <!-- 食品・農業 -->
+                  <div class="accordion-item">
+                    <!-- アコーディオンタイトル -->
+                    <h3 class="accordion-ttl">
+                      食品・農業
+                      <img src="../../common/images/icn_project_arrow.png" alt="">
+                    </h3>
+                    <!-- アコーディオンコンテンツ -->
+                    <div class="accordion-content">
+                      <ul>
+                        <li>
+                          <input type="checkbox" name="industry" value="食品生産" id="食品生産">
+                          <label for="食品生産">食品生産</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="industry" value="食品加工" id="食品加工">
+                          <label for="食品加工">食品加工</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="industry" value="FoodTech" id="FoodTech">
+                          <label for="FoodTech">FoodTech</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="industry" value="飲料・酒類" id="飲料・酒類">
+                          <label for="飲料・酒類">飲料・酒類</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="industry" value="漁業・水産" id="漁業・水産">
+                          <label for="漁業・水産">漁業・水産</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="industry" value="農業" id="農業">
+                          <label for="農業">農業</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- 医療・健康 -->
+                  <div class="accordion-item">
+                    <!-- アコーディオンタイトル -->
+                    <h3 class="accordion-ttl">
+                      医療・健康
+                      <img src="../../common/images/icn_project_arrow.png" alt="">
+                    </h3>
+                    <!-- アコーディオンコンテンツ -->
+                    <div class="accordion-content">
+                      <ul>
+                        <li>
+                          <input type="checkbox" name="industry" value="ヘルスケア" id="ヘルスケア">
+                          <label for="ヘルスケア">ヘルスケア</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="industry" value="介護" id="介護">
+                          <label for="介護">介護</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="industry" value="遠隔医療" id="遠隔医療">
+                          <label for="遠隔医療">遠隔医療</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="industry" value="医療従事者向けサービス" id="医療従事者向けサービス">
+                          <label for="医療従事者向けサービス">医療従事者向けサービス</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="industry" value="医療機器" id="医療機器">
+                          <label for="医療機器">医療機器</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="industry" value="医薬品" id="医薬品">
+                          <label for="医薬品">医薬品</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="industry" value="病院" id="病院">
+                          <label for="病院">病院</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="industry" value="メンタルヘルス" id="メンタルヘルス">
+                          <label for="メンタルヘルス">メンタルヘルス</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="industry" value="臨床診断・検査" id="臨床診断・検査">
+                          <label for="臨床診断・検査">臨床診断・検査</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="industry" value="予防医療" id="予防医療">
+                          <label for="予防医療">予防医療</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-footer">
+              <div class="tag-area">
+                <p>選択した項目:</p>
+                <ul class="tag-list"></ul>
+              </div>
+              <ul class="modal-btn-box">
+                <li>
+                  <!-- リセットボタン -->
+                  <div class="clear-box"><a class="modal-btn btn-clear">項目をリセット</a></div>
+                </li>
+                <li>
+                  <!-- 検索ボタン -->
+                  <div class="submit-btn"><button id="submit" type="submit"
+                      class="modal-btn btn-submit">この条件で検索</button></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- タグ検索プルダウン -->
+        <div class="modal modal-tag">
+          <div class="modal-inner">
+            <h2 class="modal-heading">
+              タグを選択してください
+              <div class="modal-close">x</div>
+            </h2>
+            <div class="modal-wrapper">
+              <!-- アコーディオンエリア -->
+              <div class="accordion">
+                <div class="accordion-container">
+                  <!-- 企業区分 -->
+                  <div class="accordion-item">
+                    <!-- アコーディオンタイトル -->
+                    <h3 class="accordion-ttl">
+                      企業区分
+                      <img src="../../common/images/icn_project_arrow.png" alt="">
+                    </h3>
+                    <!-- アコーディオンコンテンツ -->
+                    <div class="accordion-content">
+                      <ul>
+                        <li>
+                          <input type="checkbox" name="tag" value="スタートアップ" id="スタートアップ">
+                          <label for="スタートアップ">スタートアップ</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="中小企業" id="中小企業">
+                          <label for="中小企業">中小企業</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="大手企業" id="大手企業">
+                          <label for="大手企業">大手企業</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="上場企業" id="上場企業">
+                          <label for="上場企業">上場企業</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="外資系企業" id="外資系企業">
+                          <label for="外資系企業">外資系企業</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="その他企業" id="その他企業">
+                          <label for="その他企業">その他企業</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- 目的 -->
+                  <div class="accordion-item">
+                    <!-- アコーディオンタイトル -->
+                    <h3 class="accordion-ttl">
+                      目的
+                      <img src="../../common/images/icn_project_arrow.png" alt="">
+                    </h3>
+                    <!-- アコーディオンコンテンツ -->
+                    <div class="accordion-content">
+                      <div class="accordion-sub-ttl-area">
+                        <!-- サブタイトル -->
+                        <h4 class="accordion-sub-ttl">[サービス・製品開発]</h4>
+                      </div>
+                      <ul class="three-columns">
+                        <li>
+                          <input type="checkbox" name="tag" value="販売パートナー募集（チャネル拡大・エンゲージメント向上）"
+                            id="販売パートナー募集（チャネル拡大・エンゲージメント向上）">
+                          <label for="販売パートナー募集（チャネル拡大・エンゲージメント向上）">販売パートナー募集（チャネル拡大・エンゲージメント向上）</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="既存プロダクト改善（生産プロセス・製品性能・システム）"
+                            id="既存プロダクト改善（生産プロセス・製品性能・システム）">
+                          <label for="既存プロダクト改善（生産プロセス・製品性能・システム）">既存プロダクト改善（生産プロセス・製品性能・システム）</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="リソース探索（技術・アイディアなどを探したい）"
+                            id="リソース探索（技術・アイディアなどを探したい）">
+                          <label for="リソース探索（技術・アイディアなどを探したい）">リソース探索（技術・アイディアなどを探したい）</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="リソース提供（既存技術の提供・特許流用の検討など）"
+                            id="リソース提供（既存技術の提供・特許流用の検討など）">
+                          <label for="リソース提供（既存技術の提供・特許流用の検討など）">リソース提供（既存技術の提供・特許流用の検討など）</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="プロダクト（製品）共同開発" id="プロダクト（製品）共同開発">
+                          <label for="プロダクト（製品）共同開発">プロダクト（製品）共同開発</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="共同研究" id="共同研究">
+                          <label for="共同研究">共同研究</label>
+                        </li>
+                      </ul>
+                      <div class="accordion-sub-ttl-area">
+                        <h4 class="accordion-sub-ttl">[共創環境の構築]</h4>
+                      </div>
+                      <ul class="three-columns">
+                        <li>
+                          <input type="checkbox" name="tag" value="売却したい" id="売却したい">
+                          <label for="売却したい">売却したい</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="買収したい" id="買収したい">
+                          <label for="買収したい">買収したい</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="資金調達したい" id="資金調達したい">
+                          <label for="資金調達したい">資金調達したい</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="出資したい" id="出資したい">
+                          <label for="出資したい">出資したい</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="ラボ設立" id="ラボ設立">
+                          <label for="ラボ設立">ラボ設立</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="ジョイントベンチャー設立" id="ジョイントベンチャー設立">
+                          <label for="ジョイントベンチャー設立">ジョイントベンチャー設立</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="事業提携" id="事業提携">
+                          <label for="事業提携">事業提携</label>
+                        </li>
+                      </ul>
+                      <div class="accordion-sub-ttl-area">
+                        <h4 class="accordion-sub-ttl">[ナレッジシェア・テストマーケティング]</h4>
+                      </div>
+                      <ul class="three-columns">
+                        <li>
+                          <input type="checkbox" name="tag" value="テストマーケティング" id="テストマーケティング">
+                          <label for="テストマーケティング">テストマーケティング</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="新市場の模索" id="新市場の模索">
+                          <label for="新市場の模索">新市場の模索</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="ネットワーキング" id="ネットワーキング">
+                          <label for="ネットワーキング">ネットワーキング</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="ピッチイベント実施" id="ピッチイベント実施">
+                          <label for="ピッチイベント実施">ピッチイベント実施</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="ハッカソンの実施" id="ハッカソンの実施">
+                          <label for="ハッカソンの実施">ハッカソンの実施</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="アイディアソンの実施" id="アイディアソンの実施">
+                          <label for="アイディアソンの実施">アイディアソンの実施</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="プロジェクト・イベント型（期間限定）での協業" id="プロジェクト・イベント型（期間限定）での協業">
+                          <label for="プロジェクト・イベント型（期間限定）での協業">プロジェクト・イベント型（期間限定）での協業</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- 設立年 -->
+                  <div class="accordion-item">
+                    <!-- アコーディオンタイトル -->
+                    <h3 class="accordion-ttl">
+                      設立年
+                      <img src="../../common/images/icn_project_arrow.png" alt="">
+                    </h3>
+                    <!-- アコーディオンコンテンツ -->
+                    <div class="accordion-content">
+                      <ul>
+                        <li>
+                          <input type="checkbox" name="tag" value="1年未満" id="1年未満">
+                          <label for="1年未満">1年未満</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="3年未満" id="3年未満">
+                          <label for="3年未満">3年未満</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="3年以上" id="3年以上">
+                          <label for="3年以上">3年以上</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- 従業員数 -->
+                  <div class="accordion-item">
+                    <!-- アコーディオンタイトル -->
+                    <h3 class="accordion-ttl">
+                      従業員数
+                      <img src="../../common/images/icn_project_arrow.png" alt="">
+                    </h3>
+                    <!-- アコーディオンコンテンツ -->
+                    <div class="accordion-content">
+                      <ul>
+                        <li>
+                          <input type="checkbox" name="tag" value="〜10人未満" id="〜10人未満">
+                          <label for="〜10人未満">〜10人未満</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="10〜100人未満" id="10〜100人未満">
+                          <label for="10〜100人未満">10〜100人未満</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="101〜500人未満" id="101〜500人未満">
+                          <label for="101〜500人未満">101〜500人未満</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="tag" value="501人以上" id="501人以上">
+                          <label for="501人以上">501人以上</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-footer">
+              <div class="tag-area">
+                <p>選択した項目:</p>
+                <ul class="tag-list"></ul>
+              </div>
+              <ul class="modal-btn-box">
+                <li>
+                  <!-- リセットボタン -->
+                  <div class="clear-box"><a class="modal-btn btn-clear">項目をリセット</a></div>
+                </li>
+                <li>
+                  <!-- 検索ボタン -->
+                  <div class="submit-btn"><button id="submit" type="submit"
+                      class="modal-btn btn-submit">この条件で検索</button></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- ここまでモーダルウインドウ -->
+        <!-- 新着プロジェクト -->
+        <div class="result">
+          <h2>検索結果</h2>
+          <p class="result-num result-project">
+            <!-- 検索の結果が何件なのか入ります -->
+            検索結果: 34件
+            <!-- 現在は何件〜何件目なのか表示 -->
+            <span class="now-project">(1-5件を表示)</span>
+          </p>
+          <ul class="project-all">
+            <li class="project-all-item">
+              <div class="project-container">
+                <!-- プロジェクトのタイトルが入ります 文字数制限有り-->
+                <h3>
+                  タッチスキャンできる非接触型ICチップをカードの両面に埋め込める特許を取得しました。この新しい両面カードを利用した市場の開拓、量産、販売を支援していただける企業を探しています。
+                </h3>
+                <div class="project-wrapper">
+                  <!-- プロジェクトの画像が入ります -->
+                  <img src="../../common/images/test_pickup1.png" alt="プロジェクトの画像">
+                  <div class="project-r">
+                    <ul class="project-taglist">
+                      <!-- プロジェクトに設定されたタグを表示 -->
+                      <li>中小企業</li>
+                      <li>製品共同開発</li>
+                      <li>リソース提供（既存技術の提供・特許流用の検討など）</li>
+                      <li>1年未満</li>
+                      <li>スタートアップ</li>
+                    </ul>
+                    <div class="project-info">
+                      <!-- 地域タグの内容が入ります -->
+                      <p class="project-area">青森県</p>
+                      <!-- 業種タグの内容が入ります -->
+                      <p class="project-industry">半導体、ソフトウェア</p>
+                    </div>
+                    <!-- プロジェクトの会社名が入ります -->
+                    <p class="project-company">
+                      株式会社◯◯◯◯
+                    </p>
+                  </div>
+                </div>
+                <div class="project-feature">
+                  <h4 class="project-feature-ttl">■自社の特徴</h4>
+                  <!-- 自社の特徴の内容が入ります（字数制限） -->
+                  <p class="project-feature-txt">
+                    弊社は2013年に創業、クラウドサービスを活用したスマートフォンアプリを開発、国内・海外市場へ向けてリリースしています。アプリビジネスに加え、2018年、カードの両面に非接触型ICチップを埋め込む特許を取得、この量産・販売を目標としています。一昨年、中小企業庁の「ものづくり...
+                  </p>
+                </div>
+                <div class="project-problem">
+                  <h4 class="project-problem-ttl">■解決したい課題</h4>
+                  <!-- 自社の特徴の内容が入ります（字数制限） -->
+                  <p class="project-problem-txt">
+                    ・カードを読み込むリーダーは基本的にIoTデバイスもしくはスマートフォンを想定しているため、クラウドサーバーとのインターフェースしたソリューションビジネスを目標としています。・国内特許を取得してすぐに国際特許取得のためのPCT出願の手続きを行いました。この段階で国際予備審...
+                  </p>
+                </div>
+              </div>
+              <div class="project-morebtn">
+                <!-- 記事詳細ページへのリンクを貼ります -->
+                <a href="../project_single/index.html"></a>
+                <span>このプロジェクトの詳細を見る</span>
+              </div>
+            </li>
+            <li class="project-all-item">
+              <div class="project-container">
+                <!-- プロジェクトのタイトルが入ります 文字数制限有り-->
+                <h3>
+                  タッチスキャンできる非接触型ICチップをカードの両面に埋め込める特許を取得しました。この新しい両面カードを利用した市場の開拓、量産、販売を支援していただける企業を探しています。
+                </h3>
+                <div class="project-wrapper">
+                  <!-- プロジェクトの画像が入ります -->
+                  <img src="../../common/images/test_pickup1.png" alt="プロジェクトの画像">
+                  <div class="project-r">
+                    <ul class="project-taglist">
+                      <!-- プロジェクトに設定されたタグを表示 -->
+                      <li>中小企業</li>
+                      <li>製品共同開発</li>
+                      <li>リソース提供（既存技術の提供・特許流用の検討など）</li>
+                      <li>1年未満</li>
+                      <li>スタートアップ</li>
+                    </ul>
+                    <div class="project-info">
+                      <!-- 地域タグの内容が入ります -->
+                      <p class="project-area">青森県</p>
+                      <!-- 業種タグの内容が入ります -->
+                      <p class="project-industry">半導体、ソフトウェア</p>
+                    </div>
+                    <!-- プロジェクトの会社名が入ります -->
+                    <p class="project-company">
+                      株式会社◯◯◯◯
+                    </p>
+                  </div>
+                </div>
+                <div class="project-feature">
+                  <h4 class="project-feature-ttl">■自社の特徴</h4>
+                  <!-- 自社の特徴の内容が入ります（字数制限） -->
+                  <p class="project-feature-txt">
+                    弊社は2013年に創業、クラウドサービスを活用したスマートフォンアプリを開発、国内・海外市場へ向けてリリースしています。アプリビジネスに加え、2018年、カードの両面に非接触型ICチップを埋め込む特許を取得、この量産・販売を目標としています。一昨年、中小企業庁の「ものづくり...
+                  </p>
+                </div>
+                <div class="project-problem">
+                  <h4 class="project-problem-ttl">■解決したい課題</h4>
+                  <!-- 自社の特徴の内容が入ります（字数制限） -->
+                  <p class="project-problem-txt">
+                    ・カードを読み込むリーダーは基本的にIoTデバイスもしくはスマートフォンを想定しているため、クラウドサーバーとのインターフェースしたソリューションビジネスを目標としています。・国内特許を取得してすぐに国際特許取得のためのPCT出願の手続きを行いました。この段階で国際予備審...
+                  </p>
+                </div>
+              </div>
+              <div class="project-morebtn">
+                <!-- 記事詳細ページへのリンクを貼ります -->
+                <a href="../project_single/index.html"></a>
+                <span>このプロジェクトの詳細を見る</span>
+              </div>
+            </li>
+            <li class="project-all-item">
+              <div class="project-container">
+                <!-- プロジェクトのタイトルが入ります 文字数制限有り-->
+                <h3>
+                  タッチスキャンできる非接触型ICチップをカードの両面に埋め込める特許を取得しました。この新しい両面カードを利用した市場の開拓、量産、販売を支援していただける企業を探しています。
+                </h3>
+                <div class="project-wrapper">
+                  <!-- プロジェクトの画像が入ります -->
+                  <img src="../../common/images/test_pickup1.png" alt="プロジェクトの画像">
+                  <div class="project-r">
+                    <ul class="project-taglist">
+                      <!-- プロジェクトに設定されたタグを表示 -->
+                      <li>中小企業</li>
+                      <li>製品共同開発</li>
+                      <li>リソース提供（既存技術の提供・特許流用の検討など）</li>
+                      <li>1年未満</li>
+                      <li>スタートアップ</li>
+                    </ul>
+                    <div class="project-info">
+                      <!-- 地域タグの内容が入ります -->
+                      <p class="project-area">青森県</p>
+                      <!-- 業種タグの内容が入ります -->
+                      <p class="project-industry">半導体、ソフトウェア</p>
+                    </div>
+                    <!-- プロジェクトの会社名が入ります -->
+                    <p class="project-company">
+                      株式会社◯◯◯◯
+                    </p>
+                  </div>
+                </div>
+                <div class="project-feature">
+                  <h4 class="project-feature-ttl">■自社の特徴</h4>
+                  <!-- 自社の特徴の内容が入ります（字数制限） -->
+                  <p class="project-feature-txt">
+                    弊社は2013年に創業、クラウドサービスを活用したスマートフォンアプリを開発、国内・海外市場へ向けてリリースしています。アプリビジネスに加え、2018年、カードの両面に非接触型ICチップを埋め込む特許を取得、この量産・販売を目標としています。一昨年、中小企業庁の「ものづくり...
+                  </p>
+                </div>
+                <div class="project-problem">
+                  <h4 class="project-problem-ttl">■解決したい課題</h4>
+                  <!-- 自社の特徴の内容が入ります（字数制限） -->
+                  <p class="project-problem-txt">
+                    ・カードを読み込むリーダーは基本的にIoTデバイスもしくはスマートフォンを想定しているため、クラウドサーバーとのインターフェースしたソリューションビジネスを目標としています。・国内特許を取得してすぐに国際特許取得のためのPCT出願の手続きを行いました。この段階で国際予備審...
+                  </p>
+                </div>
+              </div>
+              <div class="project-morebtn">
+                <!-- 記事詳細ページへのリンクを貼ります -->
+                <a href="../project_single/index.html"></a>
+                <span>このプロジェクトの詳細を見る</span>
+              </div>
+            </li>
+          </ul>
+          <!-- ページネーション -->
+          <div class="pagenation">
+            <a href="" class="pagenation-number prev">前へ</a>
+            <a href="" class="pagenation-number">1</a>
+            <span href="" class="pagenation-number current">2</span>
+            <a href="" class="pagenation-number">3</a>
+            <span class="pagenation-number dots">...</span>
+            <a href="" class="pagenation-number">7</a>
+            <a href="" class="pagenation-number">8</a>
+            <a href="" class="pagenation-number next">次へ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-bg"></div>
+  </main>
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-contents">
+        <img class="footer-logo" src="../../common/images/img_header_logo_w.png">
+        <nav class="footer-gnav">
+          <ul class="r-gnav">
+            <li>
+              <a href="../../project/project_top/index.html">
+                <span>パートナーを探す</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../newsletter/newsletter_top/index.html">
+                <span>ニュースレター</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../about/about/index.html">
+                <span>このサイトについて</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../news/news_top/index.html">
+                <span>お知らせ</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../contact/contact_1/index.html">
+                <span>お問い合わせ</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../signin/signin/index.html">
+                <span>ログイン</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../signup/signup_1/index.html">
+                <span>会員登録</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-adress">〒000-0000 東京都渋谷区XXX</p>
+        <a class="footer-policy" href="../../policy/index.html" target="_blank">サイトポリシー</a>
+      </div>
+      <p class="copyright">© めちゃビズ All Rights Reserved</p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="../../common/js/common.js"></script>
+</body>
+
+</html>

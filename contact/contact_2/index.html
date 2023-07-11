@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>めちゃビズ</title>
+  <meta name="description" content="ページの説明">
+  <link rel="stylesheet" type="text/css" href="../../common/css/reset.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="../../common/css/base.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="../../common/css/common.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header>
+    <div class="header-inner">
+      <a href="../../top/top/index.html" class="header-logo-link">
+        <img class="header-logo-img" src="../../common/images/img_header_logo.png">
+      </a>
+      <nav class="header-gnav">
+        <ul class="c-gnav">
+          <li>
+            <a href="../../project/project_top/index.html">
+              <span>パートナーを探す</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../newsletter/newsletter_top/index.html">
+              <span>ニュースレター</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../about/about/index.html">
+              <span>このサイトについて</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../news/news_top/index.html">
+              <span>お知らせ</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../contact/contact_1/index.html">
+              <span>お問い合わせ</span>
+            </a>
+          </li>
+        </ul>
+        <a href="../../signin/signin/index.html" class="header-login">
+          <span>ログイン</span>
+        </a>
+        <a href="../../signup/signup_1/index.html" class="header-signup">
+          <img src="../../common/images/icn_signup.png" alt="">
+          <span>会員登録</span>
+        </a>
+        <!-- ハンバーガー -->
+        <div class="hamburger">
+          <button class="hamburger-btn" type="button">
+            <span class="hamburger-btn-center"></span>
+          </button>
+          <div class="hamburger-drawer">
+            <div class="hamburger-inner">
+              <ul class="hamburger-menu">
+                <li><a href="../../top/top/index.html">TOP</a></li>
+                <li><a href="../../project/project_top/index.html">パートナーを探す</a></li>
+                <li><a href="../../newsletter/newsletter_top/index.html">ニュースレター</a></li>
+                <li><a href="../../about/about/index.html">このサイトについて</a></li>
+                <li><a href="../../news/news_top/index.html">お知らせ</a></li>
+                <li><a href="../../contact/contact_1/index.html">お問い合わせ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- ページタイトル -->
+    <div class="page-title">
+      <div class="page-title-txt">
+        <h1>お問い合わせ</h1>
+        <p>CONTACT</p>
+      </div>
+      <div class="page-title-bg"></div>
+    </div>
+    <!-- メインコンテンツ -->
+    <div class="contact">
+      <div class="contact-inner">
+        <p class="contact-txt">
+          「めちゃビズ」に関するお問い合わせは以下のフォームへご記入のうえ、送信してください。<br>
+          通常2−3営業日にてご返信を差し上げます。<br>
+          <span>*は必須項目</span>
+        </p>
+        <!-- ステップ表示 -->
+        <ol class="formstep">
+          <li class="current"><span>1</span><br>入力</li>
+          <li><span>2</span><br>確認</li>
+          <li><span>3</span><br>完了</li>
+        </ol>
+        <!-- 入力フォーム -->
+        <form class="contact-form">
+          <dl class="formset">
+            <dt class="formset-title">氏名<span>*</span></dt>
+            <dd class="formset-contents">
+              <!-- 入力内容を表示 -->
+              めちゃビズ　太郎
+            </dd>
+          </dl>
+          <dl class="formset">
+            <dt class="formset-title">会社名<span>*</span></dt>
+            <dd class="formset-contents">
+              <!-- 入力内容を表示 -->
+              株式会社◯◯◯◯
+            </dd>
+          </dl>
+          <dl class="formset">
+            <dt class="formset-title">電話番号<span>*</span></dt>
+            <dd class="formset-contents">
+              <!-- 入力内容を表示 -->
+              XXX-XXX-XXXX
+            </dd>
+          </dl>
+          <dl class="formset">
+            <dt class="formset-title">メールアドレス<span>*</span></dt>
+            <dd class="formset-contents">
+              <!-- 入力内容を表示 -->
+              abc@aaa.co.jp
+            </dd>
+          </dl>
+          <dl class="formset">
+            <dt class="formset-title">問い合わせのカテゴリー<span>*</span></dt>
+            <dd class="formset-contents">
+              <!-- 入力内容を表示 -->
+              料金プランに関するお問い合わせ
+            </dd>
+          </dl>
+          <dl class="formset">
+            <dt class="formset-title">問い合わせ内容<span>*</span></dt>
+            <dd class="formset-contents">
+              <!-- 入力内容を表示 -->
+              お問い合わせの内容です。お問い合わせの内容です。お問い合わせの内容です。
+              お問い合わせの内容です。お問い合わせの内容です。
+            </dd>
+          </dl>
+          <div class="formset-buttons">
+            <button class="formset-fix-btn" type="button" onclick="location.href='../signup_1/index.html'">
+              内容を修正する
+            </button>
+            <button class="formset-register-btn" type="button" onclick="location.href='../contact_3/index.html'">
+              上記の内容で送信
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-contents">
+        <img class="footer-logo" src="../../common/images/img_header_logo_w.png">
+        <nav class="footer-gnav">
+          <ul class="r-gnav">
+            <li>
+              <a href="../../project/project_top/index.html">
+                <span>パートナーを探す</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../newsletter/newsletter_top/index.html">
+                <span>ニュースレター</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../about/about/index.html">
+                <span>このサイトについて</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../news/news_top/index.html">
+                <span>お知らせ</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../contact/contact_1/index.html">
+                <span>お問い合わせ</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../signin/signin/index.html">
+                <span>ログイン</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../signup/signup_1/index.html">
+                <span>会員登録</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-adress">〒000-0000 東京都渋谷区XXX</p>
+        <a class="footer-policy" href="../../policy/index.html" target="_blank">サイトポリシー</a>
+      </div>
+      <p class="copyright">© めちゃビズ All Rights Reserved</p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="../../common/js/common.js"></script>
+</body>
+
+</html>

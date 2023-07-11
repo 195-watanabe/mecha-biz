@@ -1,0 +1,47 @@
+.contact {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.contact-inner {
+  width: 480px;
+  margin: 0 auto;
+}
+.contact-heading {
+  font-size: 22px;
+  font-weight: 500;
+}
+.contact-txt {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6em;
+  margin-top: 24px;
+}
+.contact-txt span {
+  color: red;
+}
+
+@media screen and (max-width: 767px) {
+  .contact {
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+  .contact-inner {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .contact-heading {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .contact-txt {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin-top: 12px;
+  }
+  .contact-txt span {
+    color: red;
+  }
+}

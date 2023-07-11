@@ -123,7 +123,7 @@
           <!-- 検索ボタン -->
           <div class="search-btn-area">
             <button class="search-btn btn-reset btn-clear">条件をリセット</button>
-            <button class="search-btn btn-search" type="button" onclick="location.href='../newsletter_result/index.html'">検索する</button>
+            <button class="search-btn btn-search">検索する</button>
           </div>
         </div>
         <!-- ここからモーダルウインドウ -->
@@ -194,7 +194,8 @@
                 </li>
                 <li>
                   <!-- 検索ボタン -->
-                  <div class="submit-btn"><button id="submit" type="submit" class="modal-btn btn-submit">この条件で検索</button>
+                  <div class="submit-btn"><button id="submit" type="submit"
+                      class="modal-btn btn-submit">この条件で検索</button>
                   </div>
                 </li>
               </ul>
@@ -203,16 +204,22 @@
         </div>
         <!-- ここまでモーダルウインドウ -->
         <!-- 新着ニュースレター -->
-        <div class="new">
-          <h2>新着ニュースレター</h2>
+        <div class="result">
+          <h2>検索結果</h2>
+          <p class="result-num result-newsletter">
+            <!-- 検索の結果が何件なのか入ります -->
+            検索結果: 90件
+            <!-- 現在は何件〜何件目なのか表示 -->
+            <span class="now-newsletter">(1-9件を表示)</span>
+          </p>
           <ul class="newsletter-all">
             <li class="newsletter-all-item">
               <!-- ニュースレターのリンクが入ります -->
               <a href="../newsletter_single/index.html"></a>
               <!-- ニュースレターの画像が入ります -->
-              <img src="../../common/images/test_topics2.jpg" alt="">
+              <img src="../../common/images/test_topics1.jpg" alt="">
               <!-- ニュースレターの投稿日時が入ります -->
-              <time class="newsletter-date">2022.06.08</time>
+              <tim class="newsletter-date">2022.06.08</tim>
               <!-- ニュースレターのタイトルが入ります -->
               <h3>生物多様性とネイチャーポジティブ：製造業の自然関連リスクと機会</h3>
               <ul class="newsletter-taglist">
@@ -227,9 +234,9 @@
               <!-- ニュースレターのリンクが入ります -->
               <a href="../newsletter_single/index.html"></a>
               <!-- ニュースレターの画像が入ります -->
-              <img src="../../common/images/test_topics1.jpg" alt="">
+              <img src="../../common/images/test_topics2.jpg" alt="">
               <!-- ニュースレターの投稿日時が入ります -->
-              <time class="newsletter-date">2022.06.08</time>
+              <tim class="newsletter-date">2022.06.08</tim>
               <!-- ニュースレターのタイトルが入ります -->
               <h3>【エネルギー業界におけるアセット・マネジメントの高度化】ー環境の多様性から今後の展望を考える...</h3>
               <ul class="newsletter-taglist">
@@ -246,43 +253,7 @@
               <!-- ニュースレターの画像が入ります -->
               <img src="../../common/images/test_topics3.jpg" alt="">
               <!-- ニュースレターの投稿日時が入ります -->
-              <time class="newsletter-date">2022.06.08</time>
-              <!-- ニュースレターのタイトルが入ります -->
-              <h3>薬剤耐性の対策において製薬企業に求められること　【抗生剤の乱用と耐性菌の多様性において私たち...</h3>
-              <ul class="newsletter-taglist">
-                <li class="newsletter-taglist-item">ヘルスケア</li>
-                <li class="newsletter-taglist-item">製薬会社</li>
-                <li class="newsletter-taglist-item">ウイルス</li>
-                <li class="newsletter-taglist-item">耐性菌問題</li>
-                <li class="newsletter-taglist-item">次世代医療</li>
-              </ul>
-              <!-- ニュースレターの投稿者（会社名）が入ります -->
-              <p class="newsletter-company">株式会社◯◯◯◯</p>
-            </li>
-            <li class="newsletter-all-item">
-              <!-- ニュースレターのリンクが入ります -->
-              <a href="../newsletter_single/index.html"></a>
-              <!-- ニュースレターの画像が入ります -->
-              <img src="../../common/images/test_topics1.jpg" alt="">
-              <!-- ニュースレターの投稿日時が入ります -->
-              <time class="newsletter-date">2022.06.08</time>
-              <!-- ニュースレターのタイトルが入ります -->
-              <h3>【エネルギー業界におけるアセット・マネジメントの高度化】ー環境の多様性から今後の展望を考える...</h3>
-              <ul class="newsletter-taglist">
-                <li class="newsletter-taglist-item">生物多様性</li>
-                <li class="newsletter-taglist-item">サステイナビリティ</li>
-                <li class="newsletter-taglist-item">SDGs</li>
-              </ul>
-              <!-- ニュースレターの投稿者（会社名）が入ります -->
-              <p class="newsletter-company">株式会社◯◯◯◯</p>
-            </li>
-            <li class="newsletter-all-item">
-              <!-- ニュースレターのリンクが入ります -->
-              <a href="../newsletter_single/index.html"></a>
-              <!-- ニュースレターの画像が入ります -->
-              <img src="../../common/images/test_topics3.jpg" alt="">
-              <!-- ニュースレターの投稿日時が入ります -->
-              <time class="newsletter-date">2022.06.08</time>
+              <tim class="newsletter-date">2022.06.08</tim>
               <!-- ニュースレターのタイトルが入ります -->
               <h3>薬剤耐性の対策において製薬企業に求められること　【抗生剤の乱用と耐性菌の多様性において私たち...</h3>
               <ul class="newsletter-taglist">
@@ -301,7 +272,43 @@
               <!-- ニュースレターの画像が入ります -->
               <img src="../../common/images/test_topics2.jpg" alt="">
               <!-- ニュースレターの投稿日時が入ります -->
-              <time class="newsletter-date">2022.06.08</time>
+              <tim class="newsletter-date">2022.06.08</tim>
+              <!-- ニュースレターのタイトルが入ります -->
+              <h3>【エネルギー業界におけるアセット・マネジメントの高度化】ー環境の多様性から今後の展望を考える...</h3>
+              <ul class="newsletter-taglist">
+                <li class="newsletter-taglist-item">生物多様性</li>
+                <li class="newsletter-taglist-item">サステイナビリティ</li>
+                <li class="newsletter-taglist-item">SDGs</li>
+              </ul>
+              <!-- ニュースレターの投稿者（会社名）が入ります -->
+              <p class="newsletter-company">株式会社◯◯◯◯</p>
+            </li>
+            <li class="newsletter-all-item">
+              <!-- ニュースレターのリンクが入ります -->
+              <a href="../newsletter_single/index.html"></a>
+              <!-- ニュースレターの画像が入ります -->
+              <img src="../../common/images/test_topics3.jpg" alt="">
+              <!-- ニュースレターの投稿日時が入ります -->
+              <tim class="newsletter-date">2022.06.08</tim>
+              <!-- ニュースレターのタイトルが入ります -->
+              <h3>薬剤耐性の対策において製薬企業に求められること　【抗生剤の乱用と耐性菌の多様性において私たち...</h3>
+              <ul class="newsletter-taglist">
+                <li class="newsletter-taglist-item">ヘルスケア</li>
+                <li class="newsletter-taglist-item">製薬会社</li>
+                <li class="newsletter-taglist-item">ウイルス</li>
+                <li class="newsletter-taglist-item">耐性菌問題</li>
+                <li class="newsletter-taglist-item">次世代医療</li>
+              </ul>
+              <!-- ニュースレターの投稿者（会社名）が入ります -->
+              <p class="newsletter-company">株式会社◯◯◯◯</p>
+            </li>
+            <li class="newsletter-all-item">
+              <!-- ニュースレターのリンクが入ります -->
+              <a href="../newsletter_single/index.html"></a>
+              <!-- ニュースレターの画像が入ります -->
+              <img src="../../common/images/test_topics1.jpg" alt="">
+              <!-- ニュースレターの投稿日時が入ります -->
+              <tim class="newsletter-date">2022.06.08</tim>
               <!-- ニュースレターのタイトルが入ります -->
               <h3>生物多様性とネイチャーポジティブ：製造業の自然関連リスクと機会</h3>
               <ul class="newsletter-taglist">
@@ -313,6 +320,17 @@
               <p class="newsletter-company">株式会社◯◯◯◯</p>
             </li>
           </ul>
+          <!-- ページネーション -->
+          <div class="pagenation">
+            <a href="" class="pagenation-number prev">前へ</a>
+            <a href="" class="pagenation-number">1</a>
+            <span href="" class="pagenation-number current">2</span>
+            <a href="" class="pagenation-number">3</a>
+            <span class="pagenation-number dots">...</span>
+            <a href="" class="pagenation-number">7</a>
+            <a href="" class="pagenation-number">8</a>
+            <a href="" class="pagenation-number next">次へ</a>
+          </div>
         </div>
       </div>
     </div>

@@ -139,8 +139,9 @@
           </div>
           <!-- 検索ボタン -->
           <div class="search-btn-area">
-            <button class="search-btn btn-reset">条件をリセット</button>
-            <button class="search-btn btn-search">検索する</button>
+            <button class="search-btn btn-reset  btn-clear">条件をリセット</button>
+            <button class="search-btn btn-search" type="button"
+              onclick="location.href='../project_result/index.html'">検索する</button>
           </div>
         </div>
         <!-- ここからモーダルウインドウ -->
@@ -622,10 +623,6 @@
                           <input type="checkbox" name="tag" value="その他企業" id="その他企業">
                           <label for="その他企業">その他企業</label>
                         </li>
-                        <li>
-                          <input type="checkbox" name="tag" value="福島" id="福島">
-                          <label for="福島">福島</label>
-                        </li>
                       </ul>
                     </div>
                   </div>
@@ -815,8 +812,8 @@
         <!-- 新着プロジェクト -->
         <div class="new">
           <h2>新着プロジェクト</h2>
-          <ul class="project-list">
-            <li class="project-list-item">
+          <ul class="project-all">
+            <li class="project-all-item">
               <div class="project-container">
                 <!-- プロジェクトのタイトルが入ります 文字数制限有り-->
                 <h3>
@@ -867,7 +864,7 @@
                 <span>このプロジェクトの詳細を見る</span>
               </div>
             </li>
-            <li class="project-list-item">
+            <li class="project-all-item">
               <div class="project-container">
                 <!-- プロジェクトのタイトルが入ります 文字数制限有り-->
                 <h3>
@@ -918,7 +915,7 @@
                 <span>このプロジェクトの詳細を見る</span>
               </div>
             </li>
-            <li class="project-list-item">
+            <li class="project-all-item">
               <div class="project-container">
                 <!-- プロジェクトのタイトルが入ります 文字数制限有り-->
                 <h3>

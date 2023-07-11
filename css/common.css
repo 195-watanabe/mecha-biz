@@ -27,6 +27,38 @@
   }
 }
 
+.pagenation {
+  display: flex;
+  justify-content: center;
+  margin: 48px 0;
+}
+.pagenation-number {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  text-decoration: none;
+  margin: 0 4px;
+  border-radius: 4px;
+}
+.pagenation-number.current {
+  background-color: #22B5BE;
+  color: #fff;
+}
+.pagenation-number.dots {
+  border: none;
+}
+.pagenation-number.prev, .pagenation-number.next {
+  font-family: "Noto Sans JP", sans-serif;
+  padding: 0 8px;
+}
+
 .formstep {
   display: flex;
   width: 400px;
@@ -76,6 +108,7 @@
 
 .formset {
   display: block;
+  width: 100%;
   margin-top: 32px;
 }
 .formset-title {
@@ -90,10 +123,14 @@
   margin-top: 16px;
   line-height: 1.6;
 }
-.formset-contents input {
+.formset-contents input,
+.formset-contents select,
+.formset-contents textarea {
+  box-sizing: border-box;
+  display: block;
   font-size: 16px;
   letter-spacing: 0.08em;
-  width: 480px;
+  width: 100%;
   padding: 16px;
   border: 1px solid #3E3F40;
   border-radius: 8px;
@@ -114,6 +151,9 @@
   padding: 16px;
   border: 0 solid #fff;
   border-radius: 8px;
+}
+.formset-confirm-btn.contact-btn {
+  width: 220px;
 }
 .formset-login-btn {
   display: inline-block;
@@ -151,7 +191,8 @@
   border-radius: 8px;
 }
 
-.agreement-txt {
+.agreement-txt,
+.forgot-txt {
   display: flex;
   flex-wrap: wrap;
   margin-top: 32px;
@@ -159,7 +200,8 @@
   font-weight: 500;
   line-height: 1.6em;
 }
-.agreement-txt a {
+.agreement-txt a,
+.forgot-txt a {
   color: red;
   text-decoration: underline;
 }
@@ -170,7 +212,7 @@
 }
 .thanks-inner {
   width: 700px;
-  margin: 0 auto;
+  margin: 64px auto 0;
 }
 .thanks-heading {
   font-size: 24px;
@@ -280,7 +322,8 @@
     border-radius: 8px;
   }
 
-  .agreement-txt {
+  .agreement-txt,
+.forgot-txt {
     display: block;
     margin-top: 24px;
     font-size: 12px;
@@ -288,6 +331,7 @@
   }
 
   .thanks {
+    margin: 16px auto 0;
     padding-bottom: 32px;
   }
   .thanks-inner {
