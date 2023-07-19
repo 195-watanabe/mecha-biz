@@ -5,6 +5,16 @@ $(".hamburger-btn").click(function () {//ボタンがクリックされたら
   $(".hamburger-drawer").fadeToggle(200);//ボタン自身に activeクラスを付与し
 });
 
+// スムーススクロール
+var headerHeight = $('header').outerHeight();
+$('a[href^="#"]').click(function() {
+    var href= $(this).attr("href");
+    var target = $(href);
+    var position = target.offset().top - headerHeight;
+    $('body,html').stop().animate({scrollTop:position}, 500);   
+    return false;
+});
+
 // プロジェクト検索のモーダル
 $(".searchbtn").click(function () {//ボタンがクリックされたら
   $('body').addClass('modal-open');//modal-openクラスを付与
@@ -64,7 +74,7 @@ $(function() {
       searchItem.push($(this).val() + '<span class="dot">, </span>');            
     });
     
-    $('ul.tag-list').html(tagItem);
+    $('ul.tag-list-area').html(tagItem);
     $('button.searchbtn-area').html(searchItem);
   });
   
@@ -72,7 +82,7 @@ $(function() {
     if($("input:checkbox[name='area']").prop( 'checked', false )){
       
       $("input:checkbox[name='area']").prop( 'checked', false );
-      $('ul.tag-list').html('');
+      $('ul.tag-list-area').html('');
       $('button.searchbtn-area').html('地域を選ぶ');
       
     }
@@ -83,7 +93,7 @@ $(function() {
     if($("input:checkbox[name='area']").prop( 'checked', false )){
       
       $("input:checkbox[name='area']").prop( 'checked', false );
-      $('ul.tag-list').html('');
+      $('ul.tag-list-area').html('');
       $('button.searchbtn-area').html('地域を選ぶ');
       
     }
@@ -94,7 +104,7 @@ $(function() {
     if($("input:checkbox[name='area']").prop( 'checked', false )){
       
       $("input:checkbox[name='area']").prop( 'checked', false );
-      $('ul.tag-list').html('');
+      $('ul.tag-list-area').html('');
       $('button.searchbtn-area').html('地域を選ぶ');
       
     }
@@ -112,7 +122,7 @@ $(function() {
       searchItem.push($(this).val() + '<span class="dot">, </span>');            
     });
     
-    $('ul.tag-list').html(tagItem);
+    $('ul.tag-list-industry').html(tagItem);
     $('button.searchbtn-industry').html(searchItem);
   });
   
@@ -120,7 +130,7 @@ $(function() {
     if($("input:checkbox[name='industry']").prop( 'checked', false )){
       
       $("input:checkbox[name='industry']").prop( 'checked', false );
-      $('ul.tag-list').html('');
+      $('ul.tag-list-industry').html('');
       $('button.searchbtn-industry').html('業種を選ぶ');
       
     }
@@ -131,7 +141,7 @@ $(function() {
     if($("input:checkbox[name='industry']").prop( 'checked', false )){
       
       $("input:checkbox[name='industry']").prop( 'checked', false );
-      $('ul.tag-list').html('');
+      $('ul.tag-list-industry').html('');
       $('button.searchbtn-industry').html('業種を選ぶ');
       
     }
@@ -142,7 +152,7 @@ $(function() {
     if($("input:checkbox[name='industry']").prop( 'checked', false )){
       
       $("input:checkbox[name='industry']").prop( 'checked', false );
-      $('ul.tag-list').html('');
+      $('ul.tag-list-industry').html('');
       $('button.searchbtn-industry').html('業種を選ぶ');
       
     }
@@ -160,7 +170,7 @@ $(function() {
       searchItem.push($(this).val() + '<span class="dot">, </span>');            
     });
     
-    $('ul.tag-list').html(tagItem);
+    $('ul.tag-list-tag').html(tagItem);
     $('button.searchbtn-tag').html(searchItem);
   });
   
@@ -168,7 +178,7 @@ $(function() {
     if($("input:checkbox[name='tag']").prop( 'checked', false )){
       
       $("input:checkbox[name='tag']").prop( 'checked', false );
-      $('ul.tag-list').html('');
+      $('ul.tag-list-tag').html('');
       $('button.searchbtn-tag').html('<span class="gray">指定なし</span>');
 
       
@@ -180,7 +190,7 @@ $(function() {
     if($("input:checkbox[name='tag']").prop( 'checked', false )){
       
       $("input:checkbox[name='tag']").prop( 'checked', false );
-      $('ul.tag-list').html('');
+      $('ul.tag-list-tag').html('');
       $('button.searchbtn-tag').html('<span class="gray">指定なし</span>');
       
     }
@@ -191,7 +201,7 @@ $(function() {
     if($("input:checkbox[name='tag']").prop( 'checked', false )){
       
       $("input:checkbox[name='tag']").prop( 'checked', false );
-      $('ul.tag-list').html('');
+      $('ul.tag-list-tag').html('');
       $('button.searchbtn-tag').html('<span class="gray">指定なし</span>');
       
     }

@@ -99,6 +99,11 @@
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
+    transition: .3s ease;
+    
+    &:hover {
+      background-color: $lGray;
+    }
 
     span {
       color: $green;
@@ -155,41 +160,6 @@
     }
   }
 
-  &-company {
-    display: inline-block;
-    font-size: 20px;
-    letter-spacing: .1em;
-    font-weight: 700;
-    margin-right: 18px;
-  }
-
-  &-info {
-    display: inline-flex;
-    justify-content: start;
-    align-items: center;
-  }
-
-  &-area {
-    display: inline-flex;
-    font-size: 16px;
-    font-weight: 500;
-    padding-right: 10px;
-    border-right: 1.5px solid #000;
-  }
-
-  &-industry {
-    display: inline-flex;
-    font-size: 16px;
-    font-weight: 500;
-    padding-left: 10px;
-  }
-
-  &-line {
-    border-top: 1px solid #aaa;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-
   &-bottombtn-area {
     width: 100%;
     display: flex;
@@ -212,6 +182,11 @@
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
+    transition: .3s ease;
+  
+    &:hover {
+      background-color: $lGray;
+    }
 
     span {
       color: $green;
@@ -224,7 +199,250 @@
 
 
 // レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .main {
+
+    &-inner {
+      width: 740px;
+      margin: 0 auto;
+    }
+  }
+
+  .news {
+    margin: 32px 0;
+
+    &-all {
+
+      &-item {
+        padding: 16px;
+        margin-top: 16px;
+
+        h2 {
+          font-size: 18px;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  // 記事詳細ページ
+  .single {
+
+    &-topbtn-area {
+      margin: 32px 0;
+    }
+
+    &-heading {
+      font-size: 24px;
+      line-height: 1.6em;
+      margin-top: 16px;
+    }
+
+    &-tag {
+      display: inline-block;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
+      background-color: $green;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-right: 4px;
+      margin-bottom: 8px;
+
+      &-area {
+        margin-top: 16px;
+      }
+    }
+
+    &-content {
+      margin-bottom: 32px;
+
+      p {
+        color: #000;
+        font-size: 15px;
+        font-weight: 400;
+        margin-top: 16px;
+        line-height: 1.6em;
+      }
+    }
+
+    &-bottombtn-area {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0;
+    }
+
+    &-bottombtn {
+      min-width: 200px;
+      height: 50px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 28px;
+      border: 1.5px solid $green;
+      border-radius: 10px;
+      background-color: #fff;
+      color: $green;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+
+      span {
+        color: $green;
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 14px;
+      }
+    }
+  }
+}
+
+// レスポンシブ
 // スマホサイズ
 @include mq(sm) {
+  .main {
+
+    &-inner {
+      width: calc(100% - 16px);
+      margin: 0 auto;
+    }
+  }
+
+  .news {
+    margin: 32px 0;
+
+    &-all {
+
+      &-item {
+        padding: 16px;
+        margin-top: 16px;
+
+        h2 {
+          font-size: 18px;
+          margin-top: 16px;
+        }
+      }
+    }
+
+    &-date {
+      display: inline-block;
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+      margin-right: 14px;
+      text-align: center;
+    }
+
+    &-taglist {
+      text-align: center;
+      display: inline-block;
+      list-style: none;
+
+      &-item {
+        display: inline-block;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 500;
+        background-color: $green;
+        border-radius: 16px;
+        padding: 10px 24px;
+      }
+    }
+  }
   
+  // 記事詳細ページ
+  .single {
+
+    &-topbtn-area {
+      margin: 16px 0 24px;
+    }
+  
+    &-topbtn {
+      min-width: 130px;
+      height: 40px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 11px;
+  
+      span {
+        font-size: 12px;
+        margin-right: 10px;
+      }
+    }
+
+    &-update {
+      font-size: 12px;
+
+      &-time {
+        margin-right: 10px;
+      }
+    }
+
+    &-heading {
+      font-size: 16px;
+      line-height: 1.6em;
+      margin-top: 16px;
+    }
+
+    &-tag {
+      font-size: 11px;
+      border-radius: 6px;
+      padding: 6px 10px;
+      margin-right: 4px;
+      margin-bottom: 6px;
+
+      &-area {
+        margin-top: 16px;
+      }
+    }
+
+    &-content {
+      margin-bottom: 32px;
+
+      p {
+        color: #000;
+        font-size: 12px;
+        margin-top: 10px;
+      }
+    }
+
+    &-bottombtn-area {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0;
+    }
+
+    &-bottombtn {
+      min-width: 200px;
+      height: 50px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 28px;
+      border: 1.5px solid $green;
+      border-radius: 10px;
+      background-color: #fff;
+      color: $green;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: .3s ease;
+
+      &:hover {
+        background-color: $lGray;
+      }
+
+      span {
+        color: $green;
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 14px;
+      }
+    }
+  }
 }

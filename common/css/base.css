@@ -88,6 +88,10 @@ header {
   align-items: center;
   height: 100%;
   text-decoration: none;
+  transition: 0.3s ease;
+}
+.header-gnav .c-gnav li a:hover {
+  color: #22b5be;
 }
 .header-login {
   min-width: 106.5px;
@@ -109,6 +113,10 @@ header {
   margin-bottom: 16px;
   border-radius: 0 0 8px 8px;
   background-color: #EFEFEF;
+  transition: 0.3s ease;
+}
+.header-login:hover {
+  background-color: #ddd;
 }
 .header-signup {
   min-width: 132.4px;
@@ -129,6 +137,10 @@ header {
   margin-bottom: 16px;
   border-radius: 0 0 8px 8px;
   background-color: #22B5BE;
+  transition: 0.3s ease;
+}
+.header-signup:hover {
+  background-color: #20939c;
 }
 .header-signup img {
   margin-right: 10px;
@@ -218,6 +230,10 @@ header {
   align-items: center;
   height: 100%;
   text-decoration: none;
+  transition: 0.3s ease;
+}
+.footer .r-gnav li a:hover {
+  color: #22b5be;
 }
 .footer-bottom {
   display: flex;
@@ -235,6 +251,10 @@ header {
   font-size: 12px;
   font-weight: 500;
   text-decoration: underline;
+  transition: 0.3s ease;
+}
+.footer-policy:hover {
+  color: #22b5be;
 }
 .footer .copyright {
   width: 100%;
@@ -384,6 +404,18 @@ header {
   }
   .page-title {
     margin-top: 64px;
+    padding: 0 32px;
+  }
+  .page-title-txt h1 {
+    color: #fff;
+    font-size: 24px;
+  }
+  .page-title-txt p {
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 10px;
   }
   .page-title-bg {
     position: absolute;
@@ -480,12 +512,12 @@ header {
     margin-top: 56px;
   }
   .page-title-txt h1 {
-    font-size: 18px;
+    font-size: 16px;
   }
   .page-title-txt p {
     color: #fff;
     font-family: "Lato", sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     margin-top: 8px;
   }
   .page-title-bg {
