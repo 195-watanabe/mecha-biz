@@ -6,82 +6,6 @@
   margin: 0 auto;
 }
 
-.case {
-  position: relative;
-  width: 100%;
-  margin: 64px 0;
-}
-.case h2 {
-  color: #000;
-  font-size: 20px;
-  font-weight: 700;
-}
-.case-list {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  margin-top: 32px;
-}
-.case-list li {
-  display: block;
-  width: 310px;
-  position: relative;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.14);
-  padding-bottom: 24px;
-  margin-bottom: 48px;
-}
-.case-img {
-  width: 310px;
-  height: 220px;
-  position: relative;
-}
-.case-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 10px 10px 0 0;
-}
-.case-tag {
-  position: absolute;
-  top: 12px;
-  left: 8px;
-  display: inline-block;
-  color: #fff;
-  font-size: 14px;
-  padding: 8px 16px;
-  background-color: #22b5be;
-  border-radius: 15px;
-}
-.case-txt {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 2;
-  margin: 16px 10px;
-  padding: 10px;
-  background-color: #f9fafc;
-  border-radius: 8px;
-}
-.case-company {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.4;
-  margin: 16px 10px 0;
-}
-.case-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-}
-
 .single {
   width: 100%;
 }
@@ -93,7 +17,7 @@
   margin: 40px 0;
 }
 .single-topbtn {
-  width: 180px;
+  box-sizing: border-box;
   height: 50px;
   display: inline-flex;
   justify-content: center;
@@ -257,4 +181,212 @@
   font-size: 14px;
   font-weight: 500;
   margin-right: 14px;
+}
+
+@media screen and (max-width: 1000px) {
+  .main {
+    width: 100%;
+  }
+  .main-inner {
+    width: 740px;
+  }
+  .single-topbtn-area {
+    margin: 32px 0;
+  }
+  .single-heading {
+    font-size: 22px;
+    margin-top: 16px;
+  }
+  .single-tag {
+    font-size: 12px;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+  }
+  .single-tag-area {
+    margin-top: 24px;
+  }
+  .single-img {
+    width: 740px;
+    height: 49vw;
+    margin-top: 16px;
+  }
+  .single-content {
+    margin-bottom: 32px;
+  }
+  .single-content h3 {
+    color: #22b5be;
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 1.6em;
+  }
+  .single-content p {
+    color: #000;
+    font-size: 16px;
+    margin-top: 16px;
+    line-height: 1.6em;
+  }
+  .single-content b {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 16px 0;
+  }
+  .single-content img {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  .single-company {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 16px;
+  }
+  .single-company-url {
+    display: block;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .single-company-url a {
+    color: #006CFF;
+    text-decoration: underline;
+    margin-left: 10px;
+  }
+  .single-area {
+    font-size: 14px;
+    padding-right: 8px;
+    border-right: 1px solid #000;
+  }
+  .single-industry {
+    font-size: 14px;
+    padding-left: 8px;
+  }
+  .single-line {
+    border-top: 1px solid #aaa;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main {
+    width: 100%;
+  }
+  .main-inner {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .single {
+    width: 100%;
+    position: relative;
+  }
+  .single-topbtn-area {
+    margin: 16px 0 24px;
+  }
+  .single-topbtn {
+    min-width: 130px;
+    height: 40px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 11px;
+  }
+  .single-topbtn span {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+  .single-heading {
+    font-size: 16px;
+    line-height: 1.6em;
+    margin-top: 16px;
+  }
+  .single-tag {
+    font-size: 12px;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin-right: 4px;
+    margin-bottom: 6px;
+  }
+  .single-tag-area {
+    margin-top: 16px;
+  }
+  .single-img {
+    width: 100%;
+    height: 45vw;
+    margin-top: 16px;
+  }
+  .single-content {
+    margin-bottom: 32px;
+  }
+  .single-content h3 {
+    font-size: 16px;
+    margin-top: 24px;
+  }
+  .single-content p {
+    color: #000;
+    font-size: 12px;
+    margin-top: 16px;
+  }
+  .single-content b {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.6em;
+    margin: 12px 0;
+  }
+  .single-content img {
+    max-width: 100%;
+    margin-top: 16px;
+  }
+  .single-company {
+    display: block;
+    font-size: 14px;
+    margin: 16px 0px 0;
+  }
+  .single-company-url {
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .single-company-url a {
+    color: #006CFF;
+    text-decoration: underline;
+    margin-left: 10px;
+  }
+  .single-area {
+    display: block;
+    font-size: 12px;
+    padding-right: 6px;
+    margin-top: 16px;
+  }
+  .single-industry {
+    font-size: 12px;
+    padding-left: 6px;
+    margin-top: 16px;
+  }
+  .single-line {
+    border-top: 1px solid #aaa;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .single-bottombtn-area {
+    margin: 32px 0;
+  }
+  .single-bottombtn {
+    min-width: 180px;
+    height: 42px;
+    padding: 12px 24px;
+    border: 1.5px solid #22b5be;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #22b5be;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .single-bottombtn span {
+    color: #22b5be;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 10px;
+  }
 }

@@ -15,6 +15,26 @@ $('a[href^="#"]').click(function() {
     return false;
 });
 
+// プロジェクトページのカウントアップアニメ
+$('.search-inner').on('inview', function(event, isInView) {
+	if (isInView) {
+		//※※※一旦、要素が見えたときに処理を実行するようにしています。※※※
+    // ※※※検索条件によってHIT数が変更する度、カウントするようにしてください※※※
+		$(".search-inner .count-up").each(function(){
+			$(this).prop('Counter',0).animate({//0からカウントアップ
+		        Counter: $(this).text()
+		    }, {
+				// スピードやアニメーションの設定
+		        duration: 1000,//数字が大きいほど変化のスピードが遅くなる。1000=1秒
+		        easing: 'swing',//動きの種類。他にもlinearなど設定可能
+		        step: function (now) {
+		            $(this).text(Math.ceil(now));
+		        }
+		    });
+		});
+	}
+});
+
 // プロジェクト検索のモーダル
 $(".searchbtn").click(function () {//ボタンがクリックされたら
   $('body').addClass('modal-open');//modal-openクラスを付与
@@ -280,4 +300,26 @@ $('.pickup-slide').slick({
     },
    }
  ]
+});
+
+// プロジェクト一覧の「詳細を見る」ボタンのアニメーション
+$(function() {
+  var $touch = $(".project-morebtn");
+  $touch.click(function() {
+    $touch.addClass('active');
+    setTimeout(function() {
+    $touch.removeClass('active');
+    }, 200);
+  });
+});
+
+// プロジェクト詳細の「お気に入り」ボタンのアニメーション
+$('.btn-fav').on('click', function () {
+  if ($('.btn-fav').hasClass('active')) {
+    $('.btn-fav').html('<img src="../../common/images/icn_project_star.png" alt="">お気に入り');
+    $('.btn-fav').removeClass('active');
+  } else {
+    $('.btn-fav').html('<img src="../../common/images/icn_project_star.png" alt="">解除する');
+    $('.btn-fav').addClass('active');
+  }
 });

@@ -124,7 +124,7 @@
               <div class="search-count">
                 <p class="search-count-txt">プロジェクト数</p>
                 <!-- ここに検索件数を表示 -->
-                <p class="search-count-number"><span>1,234</span>件</p>
+                <p class="search-count-number"><span class="count-up">1234</span>件</p>
               </div>
               <form>
                 <!-- フリーワード検索 -->
@@ -871,11 +871,9 @@
                   </p>
                 </div>
               </div>
-              <div class="project-morebtn">
-                <!-- 記事詳細ページへのリンクを貼ります -->
-                <a href="../project_single/index.html"></a>
+              <button class="project-morebtn" type="button" onclick="location.href='../project_single/index.html'">
                 <span>このプロジェクトの詳細を見る</span>
-              </div>
+              </button>
             </li>
             <li class="project-all-item">
               <div class="project-container">
@@ -922,11 +920,9 @@
                   </p>
                 </div>
               </div>
-              <div class="project-morebtn">
-                <!-- 記事詳細ページへのリンクを貼ります -->
-                <a href="../project_single/index.html"></a>
+              <button class="project-morebtn" type="button" onclick="location.href='../project_single/index.html'">
                 <span>このプロジェクトの詳細を見る</span>
-              </div>
+              </button>
             </li>
             <li class="project-all-item">
               <div class="project-container">
@@ -973,11 +969,9 @@
                   </p>
                 </div>
               </div>
-              <div class="project-morebtn">
-                <!-- 記事詳細ページへのリンクを貼ります -->
-                <a href="../project_single/index.html"></a>
+              <button class="project-morebtn" type="button" onclick="location.href='../project_single/index.html'">
                 <span>このプロジェクトの詳細を見る</span>
-              </div>
+              </button>
             </li>
           </ul>
           <!-- ページネーション -->
@@ -1049,6 +1043,7 @@
     </div>
   </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="../../common/js/common.js"></script>
 </body>
