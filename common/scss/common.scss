@@ -76,6 +76,10 @@
 
     &.dots {
       border: none;
+
+      &:hover {
+        background-color: inherit;
+      }
     }
 
     &.prev,
