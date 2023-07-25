@@ -456,6 +456,30 @@ body.modal-open {
   background-color: #22b5be;
   color: #fff;
 }
+.new-morebtn.active span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160px;
+  height: 160px;
+  margin-top: -80px;
+  margin-left: -80px;
+  content: "";
+  background: #fff;
+  border-radius: 100%;
+  opacity: 0;
+  animation: ripple 0.3s 1 ease-out;
+}
+@keyframes ripple {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
 
 .result {
   position: relative;
@@ -612,30 +636,6 @@ body.modal-open {
 }
 .project-morebtn:hover {
   opacity: 0.8;
-}
-.project-morebtn.active span::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 160px;
-  height: 160px;
-  margin-top: -80px;
-  margin-left: -80px;
-  content: "";
-  background: #fff;
-  border-radius: 100%;
-  opacity: 0;
-  animation: ripple 0.2s 1 ease-out;
-}
-@keyframes ripple {
-  0% {
-    opacity: 1;
-    transform: scale(0);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
 }
 
 .single {

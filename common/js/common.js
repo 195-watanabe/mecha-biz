@@ -302,14 +302,14 @@ $('.pickup-slide').slick({
  ]
 });
 
-// プロジェクト一覧の「詳細を見る」ボタンのアニメーション
+// プロジェクト一覧の「もっと見る」ボタンのアニメーション
 $(function() {
-  var $touch = $(".project-morebtn");
+  var $touch = $(".new-morebtn");
   $touch.click(function() {
     $touch.addClass('active');
     setTimeout(function() {
     $touch.removeClass('active');
-    }, 200);
+    }, 300);
   });
 });
 
