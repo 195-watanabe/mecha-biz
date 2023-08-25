@@ -984,6 +984,40 @@ body.modal-open {
   opacity: 0.7;
 }
 
+.contact {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.contact-inner {
+  width: 480px;
+  margin: 0 auto;
+}
+.contact-heading {
+  font-size: 22px;
+  font-weight: 500;
+}
+.contact-txt {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6em;
+  margin-top: 24px;
+}
+.contact-txt span {
+  color: red;
+}
+
+.thanks-link {
+  display: inline-block;
+  text-align: center;
+  color: #22b5be;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 48px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .footer.padding-b-long {
   padding-bottom: 98px;
 }
@@ -2051,6 +2085,32 @@ body.modal-open {
     border-radius: 8px;
     font-size: 11px;
     margin-top: 12px;
+  }
+  .contact {
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+  .contact-inner {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .contact-heading {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .contact-txt {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin-top: 12px;
+  }
+  .contact-txt span {
+    color: red;
+  }
+  .thanks-link {
+    font-size: 12px;
+    margin-top: 24px;
   }
   .footer.padding-b-long {
     padding-bottom: 120px;

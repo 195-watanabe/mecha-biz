@@ -1,0 +1,87 @@
+@use "../../common/scss/mixin" as *;
+
+.error {
+  width: 100vw;
+  height: calc(100vh - 90px);
+  background-color: $lGray;
+  padding-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-inner {
+    width: 720px;
+    padding: 48px 24px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center
+  }
+
+  &-title {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.6em;
+  }
+
+  &-txt {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 32px;
+    line-height: 2em;
+  }
+
+  &-link {
+    display: inline-block;
+    color: $green;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 28px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .error {
+    height: calc(100vh - 64px);
+    padding-top: 64px;
+  }
+}
+
+// レスポンシブ
+// スマホサイズ
+@include mq(sm) {
+  .error {
+    height: calc(100vh - 56px);
+    padding-top: 56px;
+    padding: 56px 16px 0;
+
+    &-inner {
+      width: 100%;
+      padding: 20px 10px;
+      border-radius: 8px;
+    }
+
+    &-title {
+      font-size: 18px;
+      line-height: 1.6em;
+    }
+
+    &-txt {
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 20px;
+      line-height: 2em;
+    }
+    
+    &-link {
+      color: $green;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  }
+}

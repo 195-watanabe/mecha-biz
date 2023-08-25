@@ -1143,6 +1143,46 @@ border-radius: 8px;
   }
 }
 
+// 申込フォーム
+.contact {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &-inner {
+    width: 480px;
+    margin: 0 auto;
+  }
+
+  &-heading {
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  &-txt {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin-top: 24px;
+
+    span {
+      color: red;
+    }
+  }
+}
+
+// サンクスページ
+.thanks-link {
+  display: inline-block;
+  text-align: center;
+  color: $green;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 48px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 // footer調整
 .footer.padding-b-long {
   padding-bottom: 98px;
@@ -2474,6 +2514,40 @@ border-radius: 8px;
         margin-top: 12px;
       }
     }
+  }
+
+  // 申込フォーム
+  .contact {
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 32px;
+
+    &-inner {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    &-heading {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    &-txt {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.6em;
+      margin-top: 12px;
+
+      span {
+        color: red;
+      }
+    }
+  }
+
+  // サンクスページ
+  .thanks-link {
+    font-size: 12px;
+    margin-top: 24px;
   }
 
   // footer調整

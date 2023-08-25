@@ -77,7 +77,7 @@
 }
 .about-nav-tri {
   width: 12px;
-  height: 10.3923048454px;
+  height: calc(tan(60deg) * 12px / 2);
   background-color: #22b5be;
   -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
           clip-path: polygon(0 0, 100% 0, 50% 100%);
@@ -614,7 +614,7 @@
   }
   .about-nav-tri {
     width: 12px;
-    height: 10.3923048454px;
+    height: calc(tan(60deg) * 12px / 2);
     background-color: #22b5be;
     -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
             clip-path: polygon(0 0, 100% 0, 50% 100%);
@@ -807,7 +807,7 @@
   }
   .about-nav-tri {
     width: 8px;
-    height: 6.9282032303px;
+    height: calc(tan(60deg) * 8px / 2);
     background-color: #22b5be;
     -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
             clip-path: polygon(0 0, 100% 0, 50% 100%);
