@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>めちゃビズ</title>
-  <meta name="description" content="ページの説明">
+  <meta name="description" content="めちゃビズはBtoC市場に特化したビジネスマッチングサービスです。めちゃビズではニュースリリース機能を使った自社アピールも可能。スピーディーかつリーズナブルに理想のマッチングを実現します。">
   <link rel="stylesheet" type="text/css" href="../../common/css/reset.css">
   </link>
   <link rel="stylesheet" type="text/css" href="../../common/css/base.css">
@@ -90,74 +90,37 @@
     <!-- ページタイトル -->
     <div class="page-title">
       <div class="page-title-txt">
-        <h1>お問い合わせ</h1>
-        <p>CONTACT</p>
+        <h1>パスワード再設定</h1>
+        <p>RESETTING PASSWORD</p>
       </div>
       <div class="page-title-bg"></div>
     </div>
     <!-- メインコンテンツ -->
     <div class="contact">
       <div class="contact-inner">
+        <h2 class="contact-heading">新パスワードの設定</h2>
         <p class="contact-txt">
-          入力内容をご確認の上、送信ボタンを押してください。<br>
+          新しいパスワードを入力し、
+          設定ボタンを押してください。<br>
         </p>
-        <!-- ステップ表示 -->
-        <ol class="formstep">
-          <li><span>1</span><br>入力</li>
-          <li class="current"><span>2</span><br>確認</li>
-          <li><span>3</span><br>完了</li>
-        </ol>
         <!-- 入力フォーム -->
         <form class="contact-form">
           <dl class="formset">
-            <dt class="formset-title">氏名<span>*</span></dt>
+            <dt class="formset-title">新しいパスワード<span>*</span></dt>
             <dd class="formset-contents">
-              <!-- 入力内容を表示 -->
-              めちゃビズ　太郎
+              <input placeholder="新しいパスワードを入力" type="password">
             </dd>
           </dl>
           <dl class="formset">
-            <dt class="formset-title">会社名<span>*</span></dt>
+            <dt class="formset-title">パスワードの確認<span>*</span></dt>
             <dd class="formset-contents">
-              <!-- 入力内容を表示 -->
-              株式会社◯◯◯◯
-            </dd>
-          </dl>
-          <dl class="formset">
-            <dt class="formset-title">電話番号<span>*</span></dt>
-            <dd class="formset-contents">
-              <!-- 入力内容を表示 -->
-              XXX-XXX-XXXX
-            </dd>
-          </dl>
-          <dl class="formset">
-            <dt class="formset-title">メールアドレス<span>*</span></dt>
-            <dd class="formset-contents">
-              <!-- 入力内容を表示 -->
-              abc@aaa.co.jp
-            </dd>
-          </dl>
-          <dl class="formset">
-            <dt class="formset-title">問い合わせのカテゴリー<span>*</span></dt>
-            <dd class="formset-contents">
-              <!-- 入力内容を表示 -->
-              料金プランに関するお問い合わせ
-            </dd>
-          </dl>
-          <dl class="formset">
-            <dt class="formset-title">問い合わせ内容<span>*</span></dt>
-            <dd class="formset-contents">
-              <!-- 入力内容を表示 -->
-              お問い合わせの内容です。お問い合わせの内容です。お問い合わせの内容です。
-              お問い合わせの内容です。お問い合わせの内容です。
+              <input placeholder="確認のためパスワードを再入力" type="password">
             </dd>
           </dl>
           <div class="formset-buttons">
-            <button class="formset-fix-btn" type="button" onclick=history.back()>
-              内容を修正する
-            </button>
-            <button class="formset-register-btn" type="button" onclick="location.href='../contact_3/index.html'">
-              上記の内容で送信
+            <!-- パスワードリセットボタン -->
+            <button class="formset-confirm-btn contact-btn" type="button">
+              パスワードを設定する
             </button>
           </div>
         </form>
